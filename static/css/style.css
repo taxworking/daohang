@@ -107,18 +107,7 @@ textarea {
     width: 40px;
     align-items: center;
     justify-content: center;
-    background: url("https://cdn.jsdelivr.net/gh/eallion/favorite@master/static/css/img/scgoogle.png") center center no-repeat;
-    filter: grayscale(100%);
-    -webkit-filter: grayscale(100%);
-    -moz-filter: grayscale(100%);
-    -o-filter: grayscale(100%);
-    filter: alpha(opacity=20);
-    -moz-opacity: 0.2;
-    -khtml-opacity: 0.2;
-    opacity: 0.2;
-    cursor: pointer;
-}
-.search-logo:hover {
+    background: url("img/scgoogle.png") center center no-repeat;
     filter: grayscale(0%);
     -webkit-filter: grayscale(0%);
     -moz-filter: grayscale(0%);
@@ -127,6 +116,17 @@ textarea {
     -moz-opacity: 1;
     -khtml-opacity: 1;
     opacity: 1;
+    cursor: pointer;
+}
+.search-logo:hover {
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: alpha(opacity=20);
+    -moz-opacity: 0.2;
+    -khtml-opacity: 0.2;
+    opacity: 0.2;
 }
 .search-methods {
     display: none;
@@ -140,7 +140,7 @@ textarea {
 }
 .search-methods li {
     padding-left: 39px;
-    background: url("https://cdn.jsdelivr.net/gh/eallion/favorite@master/static/css/img/scgoogle.png") 10px no-repeat;
+    background: url("img/scgoogle.png") 10px no-repeat;
     overflow: hidden;
     height: 34px;
     line-height: 34px;
@@ -148,25 +148,25 @@ textarea {
     cursor: pointer;
 }
 .search-logo.baidu, li.baidu {
-    background-image: url("https://cdn.jsdelivr.net/gh/eallion/favorite@master/static/css/img/scbaidu.png");
+    background-image: url("img/scbaidu.png");
 }
 .search-logo.bing, li.bing {
-    background-image: url("https://cdn.jsdelivr.net/gh/eallion/favorite@master/static/css/img/scbing.png");
+    background-image: url("img/scbing.png");
 }
 .search-logo.sogou, li.sogou {
-    background-image: url("https://cdn.jsdelivr.net/gh/eallion/favorite@master/static/css/img/scsogou.png");
+    background-image: url("img/scsogou.png");
 }
 .search-logo.wangpan, li.wangpan {
-    background-image: url("https://cdn.jsdelivr.net/gh/eallion/favorite@master/static/css/img/scwangpan.png");
+    background-image: url("img/scwangpan.png");
 }
 .search-logo.so, li.so {
-    background-image: url("https://cdn.jsdelivr.net/gh/eallion/favorite@master/static/css/img/scso.png");
+    background-image: url("img/scso.png");
 }
 .search-logo.google, li.google {
-    background-image: url("https://cdn.jsdelivr.net/gh/eallion/favorite@master/static/css/img/scgoogle.png");
+    background-image: url("img/scgoogle.png");
 }
 .search-logo.jingdong, li.jingdong {
-    background-image: url("https://cdn.jsdelivr.net/gh/eallion/favorite@master/static/css/img/jingdong.png");
+    background-image: url("img/jingdong.png");
 }
 .search-methods .search-item:hover {
     background-color: #f0f0f0;
@@ -222,7 +222,7 @@ textarea {
     transform: translateY(-50%);
     cursor: pointer;
     color: #d2d2d2;
-    font-size: 30px;
+    font-size: 20px;
 }
 .search-submit {
     width: 20%;
@@ -230,7 +230,7 @@ textarea {
     min-width: 44px;
     height: 44px;
     line-height: 26px;
-    background: url("https://cdn.jsdelivr.net/gh/eallion/favorite@master/static/css/img/search.png") #1890ff  center no-repeat;
+    background: url("img/search.png") #1890ff  center no-repeat;
     -webkit-background-size: 30px 30px;
     background-size: 30px 30px;
     color: #fff;
@@ -262,12 +262,12 @@ textarea {
     padding-right: 0;
 }
 .jj-list-tit {
-    box-sizing: border-box; /*以IE盒子模型的width为标准*/
+    box-sizing: border-box; /*以 IE 盒子模型的 width 为标准*/
     font-size: 16px;
     line-height: 25px;
     color: rgba(49, 70, 89, 1);
     font-weight: bold;
-    width: 100%; /*div等分*/
+    width: 100%; /*div 等分*/
     margin: 0 0 10px 31px;
 }
 .jj-list-tit span{
@@ -278,9 +278,9 @@ textarea {
     margin: 0 auto;
 }
 .jj-list-con li {
-    box-sizing: border-box; /*以IE盒子模型的width为标准*/
-    padding: 1px 1px; /*设置div的内边距*/
-    width: 16.6%; /*div等分成6部分*/
+    box-sizing: border-box; /*以 IE 盒子模型的 width 为标准*/
+    padding: 1px 1px; /*设置 div 的内边距*/
+    width: 16.6%; /*div 等分成 6 部分*/
     float: left;
     overflow: hidden;
     text-overflow:ellipsis;
@@ -315,64 +315,6 @@ textarea {
 /* 导航栏样式 */
 header {
     width: 100%;
-    /* height: 50px; */
-    position: fixed;          /* 绝对定位（根据游览器边框定位） */
-    top: -60;
-    transition: top 0.5s;     /* 动画效果，top：显示的效果， 1s：是效果产生所花费的时间*/
-    display: none;
-    text-align: center;
-    z-index: 1;
-    background:#1890FF 100%;
-}
-/* 隐藏效果 */
-header.show {
-    top: 0px;
-    display:inline-block;
-    text-align: center;
-}
-header.hide {
-    display: none;
-}
-header:focus {
-    display: inline-block;
-}
-.header_ul {
-    display:inline-block;
-}
-.header {
-    overflow: hidden;
-    margin: 0 auto;
-    width: 100%;
-    text-align: center;
-}
-.header ul {
-    max-width: 1000px;
-    display:inline-block;
-}
-.header li {
-    margin: 0 25px;
-    float: left;
-    overflow: hidden;
-    text-overflow:ellipsis;
-    white-space: nowrap;
-    max-width: 80px;
-}
-.header li a{
-    display: block;
-    color: #eee;
-    font-size: 16px;
-    font-weight: bold  ;
-    text-align: center;
-    line-height: 44px;
-    transition: all 0.2s;
-}
-.header li a:hover {
-    font-size: 18px;
-    font-weight: bold;
-    color: #fff;
-}
-.eallion-nav{
-    display: none;
 }
 .jinrishici-desc{
     font-family: 'FZXiJinLJW';
@@ -507,17 +449,9 @@ header:focus {
         width: 85%;
     }
 }
-@media screen and (max-device-width: 1279px) {
-    header {
-        display: none !important;
-    }
-    .widget {
-        display: none;
-    }
-}
 @media screen and (max-device-width: 1259px) {
     .jj-list-con li {
-        width: 33.3%; /*div等分成3部分*/
+        width: 33.3%; /*div 等分成 3 部分*/
     }
     .jj-list-con li a{
         padding: 0 0.7em;
@@ -546,9 +480,6 @@ header:focus {
         padding-bottom: 10px;
         width: 78%;
         margin-bottom: 25px;
-    }
-    .eallion-nav{
-        display: inline-block;
     }
     .jinrishici-desc{
         display: none;

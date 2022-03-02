@@ -26,6 +26,30 @@ $(function () {
   $searchLogo.on('click', function () {
     $searchMethods.show();
   });
+
+/*兼容处理 低版本 IE*/
+//
+Array.prototype.find || (Array.prototype.find = function (predicate) {
+  if (this == null) {
+    throw new TypeError('Array.prototype.find called on null or undefined');
+  }
+  if (typeof predicate !== 'function') {
+    throw new TypeError('predicate must be a function');
+  }
+  var list = Object(this);
+  var length = list.length || 0;
+  var thisArg = arguments[1];
+  var value;
+
+  for (var i = 0; i < length; i++) {
+    value = list[i];
+    if (predicate.call(thisArg, value, i, list)) {
+      return value;
+    }
+  }
+  return null;
+})
+
   // 搜索引擎切换
   $searchMethods.on('click', 'li', function () {
     var type = $(this).data('type');
@@ -52,7 +76,7 @@ $(function () {
       openSearch(keyword)
       return;
     }
-// 关键词联想提示，跟其他2个插件冲突，因为我只用 Google ，没有 fix。
+// 关键词联想提示，跟其他 2 个插件冲突，因为我只用 Google ，没有 fix。
     // TODO 上下键选择待选答案
     var bl = moveChange(event);
     if(bl){
@@ -241,7 +265,7 @@ $(function () {
       window.open(baseUrl.url + keyword);
     }
   }
- 
+/*
 $(window).scroll(function() {
     clearTimeout($.data(this, 'scrollTimer'));
         $('header').show();
@@ -250,7 +274,7 @@ $(window).scroll(function() {
         // do something
         $('header').hide();
     }, 3000));
-});
+});*/
 /*back to top 
 $('.to-top').toTop({
   //options with default values
