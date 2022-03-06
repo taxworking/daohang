@@ -386,6 +386,9 @@ header {
 .poem_info a {
     text-decoration: none;
 }
+.shici, .shici a{
+    cursor: text;
+}
 @media (max-width: 899px) {
     .container {
         grid-template-columns: 100%
@@ -450,6 +453,10 @@ header {
 .greetings {
     display:table-cell;
     vertical-align: middle;
+}
+.greetings:hover {
+    color: #1890ff;
+    cursor: pointer;
 }
 .clock {
     padding-left: 20px;
