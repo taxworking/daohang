@@ -456,7 +456,7 @@ header {
 }
 .greetings:hover {
     color: #1890ff;
-    cursor: pointer;
+    cursor: text;
 }
 .clock {
     padding-left: 20px;
