@@ -387,8 +387,17 @@ header {
     text-decoration: none;
 }
 @media (max-width: 899px) {
-    .poem_info {
-        display: none;
+    .container {
+        grid-template-columns: 100%
+    }
+    #he-plugin-simple[data-v-41ba7e2c],.poem, .about {
+        display: none !important;
+    }
+    .logo-box {
+        padding: 20px 0;
+    }
+    .main {
+        padding-top: 25px;
     }
 }
 .time {
@@ -518,11 +527,6 @@ header {
     .input-wrap .search-input {
         height: 37px;
     }
-    .search-section {
-        padding-bottom: 10px;
-        width: 78%;
-        margin-bottom: 25px;
-    }
     .jinrishici-desc{
         display: none;
     }
@@ -537,5 +541,21 @@ header {
     }
     .s-sticker-cond {
         padding-left: 0 !important;
+    }
+    /* 20220305 */
+    .container {
+        grid-template-columns: 100%
+    }
+    #he-plugin-simple[data-v-41ba7e2c],.poem, .about {
+        display: none !important;
+    }
+    .logo-box {
+        padding: 20px 0;
+    }
+    .main {
+        padding-top: 40px;
+    }
+    .search-section {
+        width: 90%;
     }
 }
