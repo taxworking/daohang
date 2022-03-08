@@ -8,10 +8,12 @@
 - Google CN API 自动获取 favicon.ico
 - 腾讯公益 404
 - 今日诗词 API
-- jsDelivr CDN
-- smoothScroll
-- toTop
-- Google fonts
+- baomitu CDN
+- baomitu fonts
+- 和风天气
+- 多种搜索引擎
+- 动态时间显示
+- favicon lazyload
 
 ### Live Demo
 - [https://s.eallion.com](https://s.eallion.com)
