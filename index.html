@@ -48,42 +48,312 @@
       <div id="clock" class="clock">北京时间</div>
     </div>
     <!-- slogan end -->
-    <!-- 搜索框 start -->
-    <div id="search_form" class="search-section">
-      <div class="search-left">
-        <div id="search_logo" data-type="google" class="search-logo"></div>
-        <div class="input-wrap">
-          <input id="search_keyword"
-                class="search-input"
-                name="keyword"
-                maxlength="100"
-                autocomplete="off"
-                type="text"
-                placeholder="Enter to Search !">
-          <div class="clear-keyword" id="clear_keyword" title="清空">×</div>
-        </div>
-        <!--  搜索引擎 start  -->
-        <ul id="search_methods" class="search-methods">
-          <li data-type="google" class="search-item google">Google</li>
-          <li data-type="github" class="search-item github">GitHub</li>
-          <li data-type="whois" class="search-item whois">Whois</li>
-          <li data-type="baidu" class="search-item baidu">百度</li>
-          <li data-type="bing" class="search-item bing">必应</li>
-          <li data-type="so" class="search-item so">360 搜索</li>
-          <li data-type="sogou" class="search-item sogou">搜狗</li>
-          <li data-type="taobao" class="search-item taobao">淘宝</li>
-          <li data-type="jingdong" class="search-item jingdong">京东</li>
-        </ul>
-        <!--  搜索引擎 end  -->
-        <!--  搜索结果 start -->
-        <ul id="search_result" class="search-result">
-          <!--<li class="result-item"></li>-->
-        </ul>
-        <!--  搜索结果 end -->
+    <!-- Search Start -->
+    <div class="item-box border" id="home_search">
+      <section class="bulletin-slick border slick-initialized slick-slider slick-vertical">
+          <span class="btn metaColor"><svg t="1546935455791" class="icon" width="14" height="14" viewBox="0 0 1024 1024"
+                  version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2669" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <path
+                      d="M0 388.247488l0 138.92098c0 58.767452 33.495241 106.408495 74.81501 106.408495l66.161569 0 0 282.58396c0 38.927591 31.557018 70.483284 70.486243 70.483284s70.488289-31.555693 70.488289-70.483284l0-75.461669-31.393282 0c-13.992253 0-25.335055-11.341303-25.335055-25.333992 0-13.989619 11.341779-25.333992 25.335055-25.333992l31.393282 0 0-60.58075-31.393282 0c-13.992253 0-25.335055-11.341303-25.335055-25.333992 0-13.989619 11.341779-25.333992 25.335055-25.333992l31.393282 0 0-45.205575L281.951111 484.915132l0-203.075115L74.81501 281.840016C33.495241 281.840016 0 329.480037 0 388.247488zM950.755831 0l71.452284 0 0 915.415956-71.452284 0 0-915.415956ZM317.750934 281.840016l0 352.402095c0 0 88.470581 0 130.724667 0 114.029749 0 468.89244 281.907555 468.89244 281.907555l0.565912-916.149667c0 0-352.641 281.838993-470.993376 281.838993C394.080501 281.840016 317.750934 281.840016 317.750934 281.840016z">
+                  </path>
+              </svg></span>
+          <div class="slick-list draggable" tabindex="0">
+              <div class="slick-track" style="opacity: 1;">机会总是垂青于有准备的人</div>
+          </div>
+      </section>
+      <script type="text/javascript">
+          $(function () {
+              $('.bulletin-slick').slick({
+                  autoplay: true,
+                  vertical: true
+              });
+          });
+      </script>
+      <div id="search">
+          <div id="search-list" class="hide-type-list">
+              <!-- 类型 -->
+              <div class="s-type">
+                  <span class="type-text"></span>
+                  <div class="s-type-list transition">
+                      <label for="type-google">常用</label>
+                      <label for="type-163">音乐</label>
+                      <label for="type-piaohua">视频</label>
+                      <label for="type-jd">购物</label>
+                      <label for="type-pexels">图片</label>
+                      <label for="type-csswinner">设计</label>
+                  </div>
+              </div>
+              <!-- 搜索 -->
+              <div class="search-group s-current">
+                  <span class="type-text metaColor">常用</span>
+                  <ul class="search-type">
+                      <li>
+                          <input checked="" type="radio" name="type" id="type-google"
+                              value="https://www.google.com/search?q=" data-placeholder="OK Google!" hidden="">
+                          <label for="type-google" class="metaColor transition">Google</label>
+                      </li>
+                      <li>
+                          <input checked="" type="radio" name="type" id="type-github"
+                              value="https://github.com/search?q=" data-placeholder="Where the world builds software" hidden="">
+                          <label for="type-github" class="metaColor transition">GitHub</label>
+                      </li>
+                      <li>
+                          <input checked="" type="radio" name="type" id="type-bing" value="https://www.bing.com/search?q"
+                              data-placeholder="有求必应！" hidden="">
+                          <label for="type-bing" class="metaColor transition">必应</label>
+                      </li>
+                      <li>
+                          <input checked="" type="radio" name="type" id="type-baidu" value="https://www.baidu.com/s?wd="
+                              data-placeholder="百度一下，你就知道！" hidden="">
+                          <label for="type-baidu" class="metaColor transition">百度</label>
+                      </li>
+                      <li>
+                          <input checked="" type="radio" name="type" id="type-360"
+                              value="https://www.so.com/s?q=" data-placeholder="SO 靠谱！" hidden="">
+                          <label for="type-360" class="metaColor transition">360</label>
+                      </li>
+                      <li>
+                          <input checked="" type="radio" name="type" id="type-sogou"
+                              value="https://www.sogou.com/web?query=" data-placeholder="上网从搜狗开始！" hidden="">
+                          <label for="type-sogou" class="metaColor transition">搜狗</label>
+                      </li>
+                      <li>
+                          <input checked="" type="radio" name="type" id="type-douban"
+                              value="https://www.douban.com/search?q=" data-placeholder="汇集一亿人生活趣味" hidden="">
+                          <label for="type-douban" class="metaColor transition">豆瓣</label>
+                      </li>
+                      <li>
+                          <input checked="" type="radio" name="type" id="type-site"
+                              value="https://eallion.com/search/?q=" data-placeholder="搜索大大的小蜗牛的博客" hidden="">
+                          <label for="type-site" class="metaColor transition">博客</label>
+                      </li>
+                  </ul>
+              </div>
+              <div class="search-group">
+                  <span class="type-text metaColor">图片</span>
+                  <ul class="search-type">
+                      <li>
+                          <input checked="" type="radio" name="type" id="type-pexels"
+                              value="https://www.pexels.com/search/" data-placeholder="Pexels免费图库搜索" hidden="">
+                          <label for="type-pexels" class="metaColor transition">Pexels</label>
+                      </li>
+                      <li>
+                          <input checked="" type="radio" name="type" id="type-hellorf"
+                              value="https://www.hellorf.com/photo/search/all/" data-placeholder="海洛正版图库" hidden="">
+                          <label for="type-hellorf" class="metaColor transition">海洛</label>
+                      </li>
+                      <li>
+                          <input checked="" type="radio" name="type" id="type-baidu-images"
+                              value="https://image.baidu.com/search/index?tn=baiduimage&amp;ps=1&amp;ct=201326592&amp;lm=-1&amp;cl=2&amp;nc=1&amp;ie=utf-8&amp;word="
+                              data-placeholder="百度图片搜索" hidden="">
+                          <label for="type-baidu-images" class="metaColor transition">百度</label>
+                      </li>
+                      <li>
+                          <input checked="" type="radio" name="type" id="type-google-images"
+                              value="https://www.google.com/search?newwindow=1&amp;safe=strict&amp;biw=1542&amp;bih=956&amp;tbm=isch&amp;sa=1&amp;q="
+                              data-placeholder="Google图片搜索" hidden="">
+                          <label for="type-google-images" class="metaColor transition">Google</label>
+                      </li>
+                      <li>
+                          <input checked="" type="radio" name="type" id="type-bing-images"
+                              value="https://www.bing.com/images/search?q=" data-placeholder="Bing图片搜索" hidden="">
+                          <label for="type-bing-images" class="metaColor transition">Bing</label>
+                      </li>
+                      <li>
+                          <input checked="" type="radio" name="type" id="type-500px" value="https://500px.com/search?q="
+                              data-placeholder="500PX 高品质摄影图片搜索" hidden="">
+                          <label for="type-500px" class="metaColor transition">500PX</label>
+                      </li>
+                      <li>
+                          <input checked="" type="radio" name="type" id="type-unsplash"
+                              value="https://unsplash.com/search/" data-placeholder="优美免费无版权高清图片搜索" hidden="">
+                          <label for="type-unsplash" class="metaColor transition">Unsplash</label>
+                      </li>
+                  </ul>
+              </div>
+              <div class="search-group">
+                  <span class="type-text metaColor">设计</span>
+                  <ul class="search-type">
+                      <li>
+                          <input checked="" type="radio" name="type" id="type-csswinner"
+                              value="https://www.csswinner.com/search/" data-placeholder="最佳的CSS网页设计灵感画廊" hidden="">
+                          <label for="type-csswinner" class="metaColor transition">CSS Winner</label>
+                      </li>
+                      <li>
+                          <input checked="" type="radio" name="type" id="type-zcool"
+                              value="https://www.zcool.com.cn/tosearch.do?page=0&amp;f=hb&amp;world="
+                              data-placeholder="站酷素材搜索" hidden="">
+                          <label for="type-zcool" class="metaColor transition">站酷</label>
+                      </li>
+                      <li>
+                          <input checked="" type="radio" name="type" id="type-uicn"
+                              value="https://s.ui.cn/index.html?keywords=" data-placeholder="UI 中国素材搜索" hidden="">
+                          <label for="type-uicn" class="metaColor transition">UI 中国</label>
+                      </li>
+                      <li>
+                          <input checked="" type="radio" name="type" id="type-shejidaren"
+                              value="https://so.shejidaren.com/cse/search?s=1461928278188833482&amp;q="
+                              data-placeholder="设计达人素材搜索" hidden="">
+                          <label for="type-shejidaren" class="metaColor transition">设计达人</label>
+                      </li>
+                      <li>
+                          <input checked="" type="radio" name="type" id="type-68design"
+                              value="https://www.68design.net/work/?k=" data-placeholder="68Design素材搜索" hidden="">
+                          <label for="type-68design" class="metaColor transition">68Design</label>
+                      </li>
+                      <li>
+                          <input checked="" type="radio" name="type" id="type-uisdc"
+                              value="https://so.uisdc.com/cse/search?s=16162430669563244173&amp;q="
+                              data-placeholder="优设素材搜索" hidden="">
+                          <label for="type-uisdc" class="metaColor transition">优设</label>
+                      </li>
+                      <li>
+                          <input checked="" type="radio" name="type" id="type-abduzeedo"
+                              value="https://abduzeedo.com/search/node?keys=" data-placeholder="一个关于创意灵感的站点" hidden="">
+                          <label for="type-abduzeedo" class="metaColor transition">Abduzeedo</label>
+                      </li>
+                      <li>
+                          <input checked="" type="radio" name="type" id="type-niice" value="https://niice.co/search/"
+                              data-placeholder="设计师视觉搜索引擎" hidden="">
+                          <label for="type-niice" class="metaColor transition">Niice</label>
+                      </li>
+                  </ul>
+              </div>
+              <div class="search-group">
+                  <span class="type-text metaColor">音乐</span>
+                  <ul class="search-type">
+                      <li>
+                        <input checked="" type="radio" name="type" id="type-spotify"
+                            value="https://open.spotify.com/search/"
+                            data-placeholder="Search from Spotify" hidden="">
+                        <label for="type-spotify" class="metaColor transition">Spotify</label>
+                      </li>
+                      <li>
+                          <input checked="" type="radio" name="type" id="type-163"
+                              value="https://music.163.com/#/search/m/?s=" data-placeholder="网易云音乐搜索" hidden="">
+                          <label for="type-163" class="metaColor transition">网易云音乐</label>
+                      </li>
+                      <li>
+                          <input checked="" type="radio" name="type" id="type-lastfm"
+                              value="https://www.last.fm/search?q=" data-placeholder="Search from Last.fm" hidden="">
+                          <label for="type-lastfm" class="metaColor transition">Last fm</label>
+                      </li>
+                      <li>
+                          <input checked="" type="radio" name="type" id="type-qq-music"
+                              value="https://y.qq.com/portal/search.html#searchid=1&amp;remoteplace=txt.yqq.top&amp;t=song&amp;w="
+                              data-placeholder="QQ音乐" hidden="">
+                          <label for="type-qq-music" class="metaColor transition">QQ 音乐</label>
+                      </li>
+                      <li>
+                          <input checked="" type="radio" name="type" id="type-xiami"
+                              value="https://www.xiami.com/search?key=" data-placeholder="虾米音乐" hidden="">
+                          <label for="type-xiami" class="metaColor transition">虾米</label>
+                      </li>
+                      <li>
+                          <input checked="" type="radio" name="type" id="type-baidu-music"
+                              value="https://music.baidu.com/search?key=" data-placeholder="百度音乐" hidden="">
+                          <label for="type-baidu-music" class="metaColor transition">百度音乐</label>
+                      </li>
+                  </ul>
+              </div>
+              <div class="search-group">
+                  <span class="type-text metaColor">视频</span>
+                  <ul class="search-type">
+                      <li>
+                        <input checked="" type="radio" name="type" id="type-youtube"
+                            value="https://www.youtube.com/results?search_query=" data-placeholder="Youtube 视频搜索"
+                            hidden="">
+                        <label for="type-youtube" class="metaColor transition">Youtube</label>
+                      </li>
+                      <li>
+                          <input checked="" type="radio" name="type" id="type-bilibili"
+                              value="https://search.bilibili.com/all?keyword=" data-placeholder="哔哩哔哩 视频搜索"
+                              hidden="">
+                          <label for="type-bilibili" class="metaColor transition">哔哩哔哩</label>
+                      </li>
+                      <li>
+                        <input checked="" type="radio" name="type" id="type-pianyuan"
+                            value="https://pianyuan.org/search?q=" data-placeholder="搜索片源网电影"
+                            hidden="">
+                        <label for="type-pianyuan" class="metaColor transition">片源网</label>
+                      </li>
+                      <li>
+                          <input checked="" type="radio" name="type" id="type-piaohua"
+                              value="https://www.piaohua.com/plus/search.php?kwtype=0&amp;keyword="
+                              data-placeholder="飘花电影高清电影下载" hidden="">
+                          <label for="type-piaohua" class="metaColor transition">飘花电影</label>
+                      </li>
+                      <li>
+                          <input checked="" type="radio" name="type" id="type-gaoqing" value="https://gaoqing.la/?s="
+                              data-placeholder="中国高清网" hidden="">
+                          <label for="type-gaoqing" class="metaColor transition">中国高清网</label>
+                      </li>
+                      <li>
+                          <input checked="" type="radio" name="type" id="type-youku"
+                              value="https://www.soku.com/search_video/q_" data-placeholder="优酷视频搜索" hidden="">
+                          <label for="type-youku" class="metaColor transition">优酷</label>
+                      </li>
+                  </ul>
+              </div>
+              <div class="search-group">
+                  <span class="type-text metaColor">购物</span>
+                  <ul class="search-type">
+                      <li>
+                          <input checked="" type="radio" name="type" id="type-kubaicai"
+                              value="https://www.kubaicai.com/?r=/l&kw=" data-placeholder="搜索精选优惠券 淘宝 京东 拼多多" hidden="">
+                          <label for="type-kubaicai" class="metaColor transition">优惠券</label>
+                      </li>
+                      <li>
+                          <input checked="" type="radio" name="type" id="type-jd"
+                              value="https://search.jd.com/Search?keyword=" data-placeholder="京东商品搜索" hidden="">
+                          <label for="type-jd" class="metaColor transition">京东</label>
+                      </li>
+                      <li>
+                          <input checked="" type="radio" name="type" id="type-taobao"
+                              value="https://s.taobao.com/search?q=" data-placeholder="淘宝商品搜索" hidden="">
+                          <label for="type-taobao" class="metaColor transition">淘宝</label>
+                      </li>
+                      <li>
+                          <input checked="" type="radio" name="type" id="type-tmall"
+                              value="https://list.tmall.com/search_product.htm?q=" data-placeholder="天猫商品搜索" hidden="">
+                          <label for="type-tmall" class="metaColor transition">天猫</label>
+                      </li>
+                      <li>
+                          <input checked="" type="radio" name="type" id="type-amazon"
+                              value="https://www.amazon.cn/s/ref=nb_sb_noss_1?__mk_zh_CN=亚马逊网站&amp;url=search-alias%3Daps&amp;field-keywords="
+                              data-placeholder="亚马逊商品搜索" hidden="">
+                          <label for="type-amazon" class="metaColor transition">亚马逊</label>
+                      </li>
+                      <li>
+                          <input checked="" type="radio" name="type" id="type-dangdang"
+                              value="https://search.dangdang.com/?key=" data-placeholder="当当商品搜索" hidden="">
+                          <label for="type-dangdang" class="metaColor transition">当当</label>
+                      </li>
+                      <li>
+                          <input checked="" type="radio" name="type" id="type-meituan"
+                              value="https://cd.meituan.com/s/?w=" data-placeholder="美团商品搜索" hidden="">
+                          <label for="type-meituan" class="metaColor transition">美团</label>
+                      </li>
+                      <li>
+                          <input checked="" type="radio" name="type" id="type-ebay" value="https://www.ebay.com/sch/"
+                              data-placeholder="eBay商品搜索" hidden="">
+                          <label for="type-ebay" class="metaColor transition">eBay</label>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+          <form action="https://www.google.com/search?q=" method="get" target="_blank" id="super-search-fm">
+              <input type="text" id="search-text" autocomplete="off" placeholder="输入关键词后按回车即可搜索">
+              <button type="submit" class="slBtn mainBg">搜 索</button>
+          </form>
+          <div class="set-check transition switchBG tip" title="新窗口将打开搜索结果">
+              <input type="checkbox" id="set-search-blank" checked="checked" required="required" hidden="hidden">
+              <label for="set-search-blank"></label>
+          </div>
       </div>
-      <!--<input class="search-submit" value="" id="search_submit" type="submit">-->
-    </div>
-    <!-- 搜索框 end -->
+  </div>
+
+    <!-- Search end -->
 </header>
 <section id="home" class="inner-center main">
   <div class="content-inside">
@@ -650,7 +920,7 @@
   <!--<script src="static/js/smoothscroll.js"></script>-->
   <script crossorigin="anonymous" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" src="https://lib.baomitu.com/moment.js/2.29.1/moment.min.js"></script>
   <script src="static/js/lazyload.min.js"></script>
-  <script src="static/js/custom.min.js"></script>
+  <script type="text/javascript" src="static/js/custom.min.js" id="custom-js"></script>
   <script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0"></script>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <script>
