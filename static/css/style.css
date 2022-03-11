@@ -632,11 +632,12 @@ li.whois {
     position: relative;
     left: 0;
     top: 0;
-    display: block;
+    display: inline-block;
     margin-left: auto;
     margin-right: auto;
     color: rgb(49, 70, 89);
     font-size: 0.925rem;
+    vertical-align: middle;
 }
 
 .slick-track:before,
