@@ -340,23 +340,23 @@ var myDate = new Date();
 var hrs = myDate.getHours();
 var greet;
 if (hrs >= 0 && hrs < 6)
-    greet = '凌晨好！欢迎光临蜗牛个人导航。';
+    greet = '🕐凌晨好！';
 else if (hrs >= 6 && hrs < 9)
-    greet = '早上好！欢迎光临蜗牛个人导航。';
+    greet = '🕢早上好！';
 else if (hrs >= 9 && hrs < 11)
-    greet = '上午好！欢迎光临蜗牛个人导航。';
+    greet = '🕙上午好！';
 else if (hrs >= 11 && hrs < 13)
-    greet = '中午好！欢迎光临蜗牛个人导航。';
+    greet = '🕧中午好！';
 else if (hrs >= 13 && hrs < 18)
-    greet = '下午好！欢迎光临蜗牛个人导航。';
+    greet = '🕒下午好！';
 else if (hrs >= 18 && hrs <= 24)
-    greet = '晚上好！欢迎光临蜗牛个人导航。';
+    greet = '🕘晚上好！';
 document.getElementById('greetings').innerHTML = greet ;
 
 // 和风天气
 WIDGET = {
   "CONFIG": {
-    "modules": "1024",
+    "modules": "10243",
     "background": "5",
     "tmpColor": "333333",
     "tmpSize": "16",
