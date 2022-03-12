@@ -15,38 +15,19 @@
     <link rel="dns-prefetch" href="//lib.baomitu.com">
     <link rel="dns-prefetch" href="//cdn.baomitu.com">
     <link rel="dns-prefetch" href="//www.googletagmanager.com">
+    <link rel="preconnect" href="https://fonts.geekzu.org">
+    <link rel="preconnect" href="https://fonts.geekzu.org" crossorigin>
     <link rel="shortcut icon" href="static/img/favicon.ico">
     <link crossorigin="anonymous" integrity="sha384-i/ZLCOBtDmoxztrtShNvc3vGe1+IbOGDzkZNC4KLXurv/BT7QInnM2AsPnvbgXH/"
         href="https://lib.baomitu.com/normalize/5.0.0/normalize.min.css" rel="stylesheet">
+    <link href="https://fonts.geekzu.org/css2?family=Ma+Shan+Zheng&family=Noto+Sans+SC&family=Noto+Serif+SC&display=swap" rel="stylesheet">
     <link href="static/css/style.min.css" rel="stylesheet" type="text/css">
     <!--[if lt IE 9]>
       <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
     <![endif]-->
-    <!-- Google Tag Manager -->
-    <script>
-        (function (w, d, s, l, i) {
-            w[l] = w[l] || [];
-            w[l].push({
-                'gtm.start': new Date().getTime(),
-                event: 'gtm.js'
-            });
-            var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s),
-                dl = l != 'dataLayer' ? '&l=' + l : '';
-            j.async = true;
-            j.src =
-                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-            f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-NP22Q3B');
-    </script>
-    <!-- End Google Tag Manager -->
 </head>
 
 <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NP22Q3B" height="0" width="0"
-            style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
     <header id="header" class="header">
         <!-- header menu start -->
         <!-- 菜单 end -->
@@ -81,7 +62,7 @@
                     <div id="greetings" class="greetings">Hello ...</div>
                     <span id="clock" class="clock">北京时间</span>
                 </div>
-                <div class="poem"><span class="shici">🕮今日诗词：</span><span id="gushici"
+                <div class="poem"><span class="shici">🕮</span><span id="gushici"
                         class="poem_sentence">正在加载古诗词......</span><span id="poem_info" class="poem_info"></span></div>
                 <div id="he-plugin-simple" class="qweather">🌤</div>
             </div>
@@ -1736,9 +1717,6 @@
         </div>
         <!-- 导航地址 end -->
     </section>
-    <!--<div>
-    <a class="to-top"><img src="static/img/top.png"></a>
-</div>-->
     <footer class="inner-center footer">
         <div class="copyright">
             <span>
@@ -1766,12 +1744,11 @@
         </div>
     </footer>
     <script src="static/js/jquery.min.js"></script>
-    <!--<script src="static/js/jquery.toTop.min.js"></script>-->
-    <!--<script src="static/js/smoothscroll.js"></script>-->
     <script crossorigin="anonymous"
         integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
         src="https://lib.baomitu.com/moment.js/2.29.1/moment.min.js"></script>
     <script src="static/js/lazyload.min.js"></script>
+    <script src="//sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8" type="text/javascript"></script>
     <script type="text/javascript" src="static/js/custom.min.js" id="custom-js"></script>
     <script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0"></script>
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -1784,10 +1761,6 @@
             });
         }
     </script>
-    <!-- Cloudflare Web Analytics -->
-    <script defer src='https://static.cloudflareinsights.com/beacon.min.js'
-        data-cf-beacon='{"token": "6c6ea1f8251546329863f48dbb541808"}'></script>
-    <!-- End Cloudflare Web Analytics -->
     <!-- Self Hosted Umami -->
     <script async defer data-website-id="fd47db62-e1d6-453d-8068-87ef4e718ef9"
         src="https://static.eallion.com/woniutongji.js" data-host-url="https://a.eallion.com"

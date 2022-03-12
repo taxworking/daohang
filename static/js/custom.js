@@ -378,18 +378,29 @@ WIDGET = {
 }
 
 // 今日诗词
+/*
 var xhr = new XMLHttpRequest();
-xhr.open('get', 'https://v1.jinrishici.com/shuqing/youqing.json');
+xhr.open('get', 'https://v1.jinrishici.com/all.json');
 xhr.onreadystatechange = function () {
     if (xhr.readyState === 4) {
     var data = JSON.parse(xhr.responseText);
     var gushici = document.getElementById('gushici');
     var poem_info = document.getElementById('poem_info');
-    gushici.innerHTML = '『' + '<a href="https://www.google.com/search?q=' + data.content + '" target="_blank" rel="noopener noreferrer">' +data.content + '</a>' + '』';
-    poem_info.innerHTML = '— ' + '<a href="https://www.google.com/search?q=' + data.author + ' ' + data.origin + '" target="_blank" rel="noopener noreferrer">' + data.author + '《' + data.origin + '》' + '</a>';
+    gushici.innerHTML ='<a href="https://www.google.com/search?q=' + data.content + '" target="_blank" rel="noopener noreferrer">' +data.content + '</a>';
+    poem_info.innerHTML = '— ' + '<a href="https://www.google.com/search?q=' + data.author + ' ' + data.origin + '" target="_blank" rel="noopener noreferrer">' + '【' + data.origin.dynasty + '】' + data.author + '《' + data.origin + '》' + '</a>';
     }
 };
 xhr.send();
+*/
+
+// 今日诗词 v2
+jinrishici.load(function(result) {
+    var sentence = document.querySelector("#gushici")
+    var info = document.querySelector("#poem_info")
+    sentence.innerHTML = '<a href="https://www.google.com/search?q=' + result.data.content + '" target="_blank" rel="noopener noreferrer">' + result.data.content + '</a>'
+    info.innerHTML = '-' + '<a href="https://www.google.com/search?q=' + result.data.origin.author + ' ' + result.data.origin.title + '" target="_blank" rel="noopener noreferrer">' + '【' + result.data.origin.dynasty + '】' + result.data.origin.author + '《' + result.data.origin.title + '》' + '</a>'
+});
+
 
 // latest search box
 if (jQuery(".comment_stars a").click((function () {
