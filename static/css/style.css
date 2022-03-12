@@ -1036,7 +1036,37 @@ ul.search-type li input:focus+label {
     font-size: 1rem;
     line-height: 1.5em;
 }
-
+/* 首页嘀咕样式 JSON 版 */
+.index-talk {
+    display: flex;
+    flex: 1 auto;
+    width: 100%;
+    text-align: left;
+    position: relative;
+}
+.talk-list {
+    overflow: hidden;
+}
+.talk-list li {
+    list-style: none;
+    margin-bottom: 10px;
+    width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: inline;
+    vertical-align: middle;
+}
+.talk-list li:not(:first-child) {
+    display: none !important;
+}
+.talk-list li a {
+    text-decoration: none;
+}
+.talk-list li a:hover {
+    text-decoration: underline;
+    color: #1890ff;
+}
 /*-----------------------------简洁版样式定义- 结束---------------------------------------------------*/
 /*-----------------------------手机自适应---------------------------------------------------*/
 
