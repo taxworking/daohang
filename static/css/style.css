@@ -50,6 +50,8 @@ body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
+    width: 100%;
+    height: 100%;
 }
 .content {
     flex: 1;
@@ -1040,7 +1042,7 @@ ul.search-type li input:focus+label {
 
 @media screen and (max-device-width: 1259px) {
     .inner-center {
-        width: 90%;
+        width: 80%;
     }
     .jj-list-con li {
         width: 33.3%;
@@ -1112,13 +1114,13 @@ ul.search-type li input:focus+label {
     }
 
     .search-section {
-        width: 90%;
+        width: 80%;
     }
     #slogan {
-        width: 85%;
+        width: 80%;
     }
     #home_search {
-        width: 90%;
+        width: 80%;
     }
     #search {
         padding: 10px 0;
