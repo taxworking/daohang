@@ -973,7 +973,6 @@ ul.search-type li input:focus+label {
 
 .poem_info {
     font-size: small;
-    font-style: italic;
     font-weight: 300;
     height: 100%;
     max-width: 50%;
