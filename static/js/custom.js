@@ -342,11 +342,11 @@ var greet;
 if (hrs >= 0 && hrs < 6)
     greet = '🕐凌晨好！';
 else if (hrs >= 6 && hrs < 9)
-    greet = '🕢早上好！';
+    greet = '🕕早上好！';
 else if (hrs >= 9 && hrs < 11)
-    greet = '🕙上午好！';
+    greet = '🕘上午好！';
 else if (hrs >= 11 && hrs < 13)
-    greet = '🕧中午好！';
+    greet = '🕛中午好！';
 else if (hrs >= 13 && hrs < 18)
     greet = '🕒下午好！';
 else if (hrs >= 18 && hrs <= 24)
