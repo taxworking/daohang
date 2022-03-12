@@ -819,12 +819,14 @@ span.type-text,
 #search input:focus,
 #search select:focus,
 #search textarea:focus {
-    box-shadow: inset 0px 0px 1px #1890ff;
+    box-shadow: inset 0px 0px 2px #1890ff;
 }
 #search input::placeholder {
     font-style: italic;
 }
-
+.focused {
+    background-color: #1890FF !important;
+}
 .search-group ul.search-type li label {
     display: inline-block;
     font-size: .875rem;
@@ -842,6 +844,10 @@ span.type-text,
 ul.search-type li input:checked+label {
     color: #333;
     background-color: #f2f2f2;
+}
+ul.search-type li input:focus+label {
+    color: #fff;
+    background-color: #1890FF;
 }
 
 .mainBg {
@@ -1168,5 +1174,23 @@ header {
 
     .search-section {
         width: 90%;
+    }
+    #slogan {
+        width: 85%;
+    }
+    #search {
+        padding: 10px 0;
+    }
+    #search-list, .s-type-list {
+        display: none;
+    }
+    .slBtn {
+        min-width: unset;
+    }
+    .greeting {
+        padding-left: 0;
+    }
+    .slogan {
+        padding-bottom: 20px;
     }
 }
