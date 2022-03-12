@@ -1037,44 +1037,11 @@ ul.search-type li input:focus+label {
 
 /*-----------------------------简洁版样式定义- 结束---------------------------------------------------*/
 /*-----------------------------手机自适应---------------------------------------------------*/
-@media screen and (max-width:1800px) {
-    .copyright>:first-child:not(:only-child) {
-        border: none;
-        padding: 0;
-        margin: 0
-    }
-}
-
-@media screen and (max-width:1800px) {
-    .copyright {
-        flex-direction: column;
-        margin: 15px 0;
-    }
-}
-
-@media screen and (max-device-width: 1800px) {
-    .time {
-        width: 80%;
-    }
-
-    .hidetimezone {
-        display: none;
-    }
-
-    .header li {
-        margin: 0px 14px;
-    }
-
-    .header li a {
-        font-size: 14px;
-    }
-
-    .inner-center {
-        width: 85%;
-    }
-}
 
 @media screen and (max-device-width: 1259px) {
+    .inner-center {
+        width: 90%;
+    }
     .jj-list-con li {
         width: 33.3%;
         /*div 等分成 3 部分*/
@@ -1150,6 +1117,9 @@ ul.search-type li input:focus+label {
     #slogan {
         width: 85%;
     }
+    #home_search {
+        width: 90%;
+    }
     #search {
         padding: 10px 0;
     }
@@ -1164,5 +1134,8 @@ ul.search-type li input:focus+label {
     }
     .slogan {
         padding-bottom: 20px;
+    }
+    .footer {
+        padding: 20px 0 30px;
     }
 }
