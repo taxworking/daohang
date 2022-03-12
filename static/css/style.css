@@ -1068,7 +1068,7 @@ ul.search-type li input:focus+label {
     text-decoration: none;
 }
 .talk-list li a:hover {
-    text-decoration: underline;
+    text-decoration: none;
     color: #1890ff;
 }
 /*-----------------------------简洁版样式定义- 结束---------------------------------------------------*/
