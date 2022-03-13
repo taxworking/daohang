@@ -1374,7 +1374,7 @@ ul.search-type li input:focus+label {
         display: none !important;
     }
 
-    .back-to-top {
+    #box ul li:last-child {
         display: none !important;
     }
 }
