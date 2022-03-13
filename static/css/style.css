@@ -1257,11 +1257,11 @@ ul.search-type li input:focus+label {
 
 @media screen and (max-device-width: 1259px) {
     .inner-center {
-        width: 80%;
+        width: 85%;
     }
 
     .jj-list-con li {
-        width: 33.3%;
+        width: 33%;
         /*div 等分成 3 部分*/
     }
 
@@ -1321,6 +1321,10 @@ ul.search-type li input:focus+label {
         display: none !important;
     }
 
+    .title {
+        padding-left: 0;
+    }
+
     .logo-box {
         padding: 20px 0;
     }
@@ -1330,15 +1334,15 @@ ul.search-type li input:focus+label {
     }
 
     .search-section {
-        width: 80%;
+        width: 85%;
     }
 
     #slogan {
-        width: 80%;
+        width: 85%;
     }
 
     #home_search {
-        width: 80%;
+        width: 85%;
     }
 
     #search {
