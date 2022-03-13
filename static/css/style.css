@@ -1290,11 +1290,11 @@ ul.search-type li input:focus+label {
         width: 98.5%;
         padding: 20px 10px;
     }
+
     .s-sticker-cond {
         padding-left: 0 !important;
     }
 
-    /* 20220305 */
     .container {
         grid-template-columns: 100%
     }
@@ -1345,6 +1345,7 @@ ul.search-type li input:focus+label {
     .bulletin-slick {
         margin: -20px -10px 20px -10px
     }
+
     .greeting {
         padding-left: 0;
     }
