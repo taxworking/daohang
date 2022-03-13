@@ -1235,26 +1235,6 @@ ul.search-type li input:focus+label {
 
 /*-----------------------------简洁版样式定义- 结束---------------------------------------------------*/
 /*-----------------------------手机自适应---------------------------------------------------*/
-@media (max-width: 899px) {
-    .container {
-        grid-template-columns: 100%
-    }
-
-    #he-plugin-simple[data-v-41ba7e2c],
-    .poem,
-    .about {
-        display: none !important;
-    }
-
-    .logo-box {
-        padding: 20px 0;
-    }
-
-    .main {
-        padding-top: 25px;
-    }
-}
-
 @media screen and (max-device-width: 1259px) {
     .inner-center {
         width: 85%;
@@ -1306,6 +1286,10 @@ ul.search-type li input:focus+label {
         padding-left: 4px !important;
     }
 
+    .item-box {
+        width: 98.5%;
+        padding: 20px 10px;
+    }
     .s-sticker-cond {
         padding-left: 0 !important;
     }
@@ -1358,6 +1342,9 @@ ul.search-type li input:focus+label {
         min-width: unset;
     }
 
+    .bulletin-slick {
+        margin: -20px -10px 20px -10px
+    }
     .greeting {
         padding-left: 0;
     }
