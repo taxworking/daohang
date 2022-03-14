@@ -737,11 +737,29 @@ $('.to-top').toTop({
 
 // toggle menu
 const sidebarBox = document.querySelector('#box'),
-  sidebarBtn = document.querySelector('#btn');
+sidebarBtn = document.querySelector('#btn'),
+pageWrapper = document.querySelector('#page-wrapper'),
+list_li = document.querySelector('#items');
 
 sidebarBtn.addEventListener('click', event => {
   sidebarBtn.classList.toggle('active');
   sidebarBox.classList.toggle('active');
+});
+
+pageWrapper.addEventListener('click', event => {
+
+  if (sidebarBox.classList.contains('active')) {
+    sidebarBtn.classList.remove('active');
+    sidebarBox.classList.remove('active');
+  }
+});
+
+list_li.addEventListener('click', event => {
+
+  if (sidebarBox.classList.contains('active')) {
+    sidebarBtn.classList.remove('active');
+    sidebarBox.classList.remove('active');
+  }
 });
 
 window.addEventListener('keydown', event => {
