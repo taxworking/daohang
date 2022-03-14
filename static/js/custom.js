@@ -394,7 +394,7 @@ document.getElementById('greetings').innerHTML = greet;
 // 和风天气
 WIDGET = {
   "CONFIG": {
-    "modules": "10243",
+    "modules": "21043",
     "background": "5",
     "tmpColor": "333333",
     "tmpSize": "16",
@@ -402,7 +402,7 @@ WIDGET = {
     "citySize": "16",
     "aqiColor": "333333",
     "aqiSize": "16",
-    "weatherIconSize": "24",
+    "weatherIconSize": "36",
     "alertIconSize": "18",
     "padding": "5px 5px 5px 5px",
     "shadow": "0",

@@ -37,7 +37,8 @@ li {
 }
 
 a {
-    text-decoration: none
+    color: #333;
+    text-decoration: none;
 }
 
 html,
@@ -104,8 +105,38 @@ textarea {
     padding-top: 60px;
 }
 
-.content-inside {
-    padding-bottom: 76px;
+.about-center {
+    width: 75% !important;
+    margin: 0 auto;
+}
+.content-about {
+    padding: 30px 0;
+    min-height: 600px;
+    width: 100% !important;
+}
+
+.content-about p {
+    text-indent: 2em;
+}
+
+.content-about blockquote {
+    margin-left: 2em !important;
+}
+
+.content-about blockquote p {
+    text-indent: 0;
+}
+
+.highlight {
+    padding-left: 2em;
+}
+
+.content-about ul li {
+    list-style-type: disc;
+}
+
+.title-about {
+    border-bottom: #f2f2f2 solid 1px;
 }
 
 .footer {
@@ -117,10 +148,10 @@ textarea {
 
 .footer p,
 .footer a,
-a:link,
-a:hover,
-a:visited,
-a:active {
+.footer a:link,
+.footer a:hover,
+.footer a:visited,
+.footer a:active {
     color: rgba(49, 70, 89, 1);
 }
 
@@ -143,7 +174,6 @@ a:active {
 .logo-box {
     position: relative;
     overflow: hidden;
-    color: #333;
     text-align: left;
     padding-bottom: 40px;
 }
@@ -622,7 +652,7 @@ li.whois {
     display: inline-block;
     margin-left: auto;
     margin-right: auto;
-    color: rgb(49, 70, 89);
+    color: #333;
     font-size: 0.925em;
     vertical-align: middle;
 }
@@ -719,6 +749,7 @@ li.whois {
     text-align: center;
     color: #333;
     cursor: pointer;
+    padding-right: 8px;
 }
 
 .s-type:hover .s-type-list {
@@ -742,7 +773,7 @@ li.whois {
 
 .metaColor a,
 .metaColor {
-    color: rgba(49, 70, 89, 1);
+    color: #333;
 }
 
 svg {
@@ -802,21 +833,15 @@ span.type-text,
 #search input,
 #search select,
 #search textarea {
-    background-color: #fff;
-    border-color: #EFF0F2;
+    background-color: #F4F9FF;
     border-bottom-left-radius: 20px;
     border-top-left-radius: 20px;
-    box-shadow: 0px 0px 5px rgba(58, 57, 68, 0.1);
 }
 
 #search input:focus,
 #search select:focus,
 #search textarea:focus {
     box-shadow: inset 0px 0px 2px #1890ff;
-}
-
-#search input::placeholder {
-    font-style: italic;
 }
 
 .search-group ul.search-type li label {
@@ -836,7 +861,7 @@ span.type-text,
 #search-text,
 ul.search-type li input:checked+label {
     color: #333;
-    background-color: #f2f2f2;
+    background-color: #F4F9FF;
 }
 
 ul.search-type li input:focus+label {
@@ -942,21 +967,17 @@ ul.search-type li input:focus+label {
 .title {
     font-size: 24px;
     font-weight: bold;
-    color: #333;
     padding-left: 20px;
 }
 
 .about {
     display: inline-flex;
-    color: #333;
     align-self: center;
     line-height: 1;
     position: relative;
 }
 
 .about a {
-    color: #333;
-    text-decoration: none;
     padding: 0 8px 0 3px;
 }
 
@@ -972,15 +993,6 @@ ul.search-type li input:focus+label {
 .about svg {
     width: 1em;
     height: 1em;
-}
-
-.poem {
-    color: #333;
-}
-
-.poem a {
-    color: #333;
-    text-decoration: none;
 }
 
 .poem a:hover {
@@ -1005,11 +1017,6 @@ ul.search-type li input:focus+label {
     height: 100%;
     max-width: 50%;
     min-width: 20%;
-}
-
-.poem_info a {
-    text-decoration: none;
-    color: #999;
 }
 
 .shici,
@@ -1073,10 +1080,6 @@ ul.search-type li input:focus+label {
 
 .talk-list li:not(:first-child) {
     display: none !important;
-}
-
-.talk-list li a {
-    text-decoration: none;
 }
 
 .talk-list li a:hover {
