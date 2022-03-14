@@ -1168,11 +1168,6 @@ ul.search-type li input:focus+label {
     opacity: 1;
 }
 
-.menus {
-    padding: 0 0 0 10px;
-    color: #1890ff;
-}
-
 #items {
     position: relative;
     top: 50%;
@@ -1360,10 +1355,6 @@ ul.search-type li input:focus+label {
 
     #btn {
         right: 12px;
-    }
-
-    .menus {
-        display: none !important;
     }
 
     #box ul li:last-child {
