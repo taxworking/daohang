@@ -100,12 +100,6 @@ textarea {
     align-items: center;
 }
 
-#header .header-grid .about svg {
-    width: 16px;
-    height: 16px;
-    vertical-align: middle;
-}
-
 .main {
     padding-top: 60px;
 }
@@ -629,7 +623,7 @@ li.whois {
     margin-left: auto;
     margin-right: auto;
     color: rgb(49, 70, 89);
-    font-size: 0.925rem;
+    font-size: 0.925em;
     vertical-align: middle;
 }
 
@@ -723,7 +717,7 @@ li.whois {
     font-size: 14px;
     line-height: 32px;
     text-align: center;
-    color: #fff;
+    color: #333;
     cursor: pointer;
 }
 
@@ -770,7 +764,7 @@ span.type-text,
 }
 
 .s-type-list {
-    background-color: #1890FF;
+    background-color: #f2f2f2;
 }
 
 .s-type .s-type-list:before,
@@ -794,15 +788,15 @@ span.type-text,
     border-top-color: #778B9E;
 }
 
-.search-group .type-text:before {
+.s-type .type-text:before {
     position: absolute;
-    top: -0;
-    right: 1.5rem;
+    top: 12px;
+    right: 25px;
     content: '▼';
     display: block;
     width: 0;
     height: 0;
-    font-size: .5rem;
+    font-size: .5em;
 }
 
 #search input,
@@ -827,7 +821,7 @@ span.type-text,
 
 .search-group ul.search-type li label {
     display: inline-block;
-    font-size: .875rem;
+    font-size: .875em;
     line-height: 32px;
     border-radius: 10px 10px 0 0;
     cursor: pointer;
@@ -953,14 +947,17 @@ ul.search-type li input:focus+label {
 }
 
 .about {
-    display: inline-block;
+    display: inline-flex;
     color: #333;
-    line-height: 18px;
+    align-self: center;
+    line-height: 1;
+    position: relative;
 }
 
 .about a {
     color: #333;
     text-decoration: none;
+    padding: 0 8px 0 3px;
 }
 
 .about a:hover {
@@ -968,7 +965,13 @@ ul.search-type li input:focus+label {
 }
 
 .about span {
+    font-size: 16px;
     padding: 0 10px 0 2px;
+}
+
+.about svg {
+    width: 1em;
+    height: 1em;
 }
 
 .poem {
@@ -993,7 +996,7 @@ ul.search-type li input:focus+label {
 
 .poem_sentence a {
     font-family: 'Ma Shan Zheng', cursive !important;
-    font-size: 1.125rem;
+    font-size: 1.125em;
 }
 
 .poem_info {
@@ -1038,7 +1041,7 @@ ul.search-type li input:focus+label {
 
 .copyright {
     align-items: center;
-    font-size: 1rem;
+    font-size: 1em;
     line-height: 1.5em;
 }
 
@@ -1198,7 +1201,7 @@ ul.search-type li input:focus+label {
 #items .item {
     position: relative;
     cursor: pointer;
-    font-size: 1rem;
+    font-size: 1em;
     padding: 10px 10px 10px 0;
     transition: all 250ms;
     text-align: center;
@@ -1214,7 +1217,7 @@ ul.search-type li input:focus+label {
 #items .item:hover::after,
 #items .item:last-child:hover::after,
 #items .item:first-child:hover::after {
-    font-size: 1rem;
+    font-size: 1em;
     color: #fff;
     transition: color 2s ease-in-out;
 }

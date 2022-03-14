@@ -378,7 +378,7 @@ var myDate = new Date();
 var hrs = myDate.getHours();
 var greet;
 if (hrs >= 0 && hrs < 6)
-  greet = '🕐凌晨好！';
+  greet = '🕑️凌晨好！';
 else if (hrs >= 6 && hrs < 9)
   greet = '🕕早上好！';
 else if (hrs >= 9 && hrs < 11)
@@ -544,19 +544,8 @@ if (jQuery(".comment_stars a").click((function () {
   mainNav.length > 0 && mainNav.addClass("navBg"), leftNav.length > 0 && jQuery(".container").append('<div class="overlay transition navBg"></div>')
 }
 
-/**
- * Lately.js - Native JavaScript, only 800Byte but simple and easy to use Timeago plugin
- *
- * @name Lately.js
- * @version 2.0.1
- * @author Tokin (Tokinx)
- * @license MIT License - http://www.opensource.org/licenses/mit-license.php
- *
- * For usage and examples, visit:
- * https://tokinx.github.io/lately/
- *
- * Copyright (c) 2017, Biji.IO
- */
+// Lately.js - Native JavaScript, only 800Byte but simple and easy to use Timeago plugin
+
 ;
 (function (global, undefined) {
   "use strict"
@@ -658,15 +647,7 @@ $(document).ready(function () {
   }
 });
 
-/**
- *  Plugin Name: jQuery toTop for smoothly Scroll back to Top
- *  Plugin URL: https://github.com/mmkjony/jQuery.toTop
- *  Version: 1.1
- *  Author: MMK Jony
- *  Author URL: https://github.com/mmkjony
- *  License: Licensed under MIT
- **/
-
+// Go to Top
 (function ($) {
   'use strict';
 
