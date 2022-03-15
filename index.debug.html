@@ -94,13 +94,14 @@
                 <div class="container">
                     <div class="greeting">
                         <div id="greetings" class="greetings">Hello ...</div>
-                        <span id="clock" class="clock">北京时间</span>
+                        <span id="date" class="date">北京时间</span>
+                        <span id="clock" class="clock"></span>
                     </div>
                     <div class="poem"><span class="shici">🕮</span><span id="gushici"
                             class="poem_sentence">正在加载古诗词......</span><span id="poem_info" class="poem_info"></span>
                     </div>
                     <div class="qweather">
-                        <span id="he-plugin-simple">🌤</span>
+                        <span id="he-plugin-simple"></span>
                     </div>
                 </div>
             </div>
@@ -1882,7 +1883,6 @@
     <script>
         // Check that service workers are registered
         if ('serviceWorker' in navigator) {
-            // Use the window load event to keep the page load performant
             window.addEventListener('load', () => {
                 navigator.serviceWorker.register('/service-worker.js');
             });

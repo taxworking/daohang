@@ -369,7 +369,8 @@ $(document).bind('DOMNodeInserted', function (event) {
 
 // Time
 function update() {
-  $('#clock').html(moment().format('YYYY年MM月DD日 HH:mm:ss'));
+  $('#date').html(moment().format('YYYY年MM月DD日'));
+  $('#clock').html(moment().format('HH:mm:ss'));
 }
 setInterval(update, 1000);
 

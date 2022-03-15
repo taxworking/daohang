@@ -175,7 +175,7 @@ textarea {
     position: relative;
     overflow: hidden;
     text-align: left;
-    padding-bottom: 40px;
+    padding-bottom: 20px;
 }
 
 /* logo end  */
@@ -967,7 +967,6 @@ ul.search-type li input:focus+label {
 .title {
     font-size: 24px;
     font-weight: bold;
-    padding-left: 20px;
 }
 
 .about {
@@ -1030,6 +1029,7 @@ ul.search-type li input:focus+label {
 .shici {
     padding-right: 2px;
 }
+
 #he-plugin-simple div [data-v-db6ccf64],
 #weather-view-he {
     display: none !important;
@@ -1046,7 +1046,6 @@ ul.search-type li input:focus+label {
 
 .greeting {
     display: table;
-    padding-left: 20px;
 }
 
 .greetings {
@@ -1318,17 +1317,20 @@ ul.search-type li input:focus+label {
     }
 
     .container {
-        grid-template-columns: 100%
+        grid-template-columns: 50% 50%;
     }
 
-    #he-plugin-simple[data-v-41ba7e2c],
+    .date {
+        display: none !important;
+    }
+
     .poem,
     .about {
         display: none !important;
     }
 
     .title {
-        padding-left: 60px;
+        text-align: center;
     }
 
     .logo-box {
@@ -1368,12 +1370,8 @@ ul.search-type li input:focus+label {
         margin: -20px -10px 20px -10px
     }
 
-    .greeting {
-        padding-left: 0;
-    }
-
     .banner {
-        padding-bottom: 20px;
+        padding-bottom: 10px;
     }
 
     .footer {
@@ -1390,5 +1388,15 @@ ul.search-type li input:focus+label {
 
     #items .item {
         padding: 8px 10px 8px 0;
+    }
+
+    .header-grid {
+        width: 100%;
+        margin: 0 auto;
+        display: inline-block !important;
+    }
+
+    .qweather {
+        padding-right: 0px !important;
     }
 }
