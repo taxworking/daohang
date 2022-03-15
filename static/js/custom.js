@@ -640,7 +640,27 @@ $(document).ready(function () {
         last_li = list_li.last();
       last_li.after(cur_li);
     };
-    setInterval(Roll, 3000);
+
+    // 设置滚动间隔时间
+    // 简单版本
+    // setInterval(Roll, 1000);
+
+    // 鼠标移入暂时滚动版本
+    var timer = null;
+
+    function startSetInterval() {
+      timer = setInterval(Roll, 3000);
+    }
+    // start function on page load
+    startSetInterval();
+
+    // hover behaviour
+    $('#index-talk').hover(function () {
+      clearInterval(timer);
+    }, function () {
+      startSetInterval();
+    });
+
     //点击关闭嘀咕 Widget
     $('button').click(function () {
       $(this).parents('#index-talk').remove();
@@ -719,11 +739,11 @@ $('.to-top').toTop({
 
 // toggle menu
 const sidebarBox = document.querySelector('#box'),
-sidebarBtn = document.querySelector('#btn'),
-pageHeader = document.querySelector('#header'),
-pageContent = document.querySelector('#content'),
-pageFooter = document.querySelector('#footer'),
-menu_li = document.querySelector('#items');
+  sidebarBtn = document.querySelector('#btn'),
+  pageHeader = document.querySelector('#header'),
+  pageContent = document.querySelector('#content'),
+  pageFooter = document.querySelector('#footer'),
+  menu_li = document.querySelector('#items');
 
 sidebarBtn.addEventListener('click', event => {
   sidebarBtn.classList.toggle('active');
