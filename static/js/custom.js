@@ -723,7 +723,7 @@ sidebarBtn = document.querySelector('#btn'),
 pageHeader = document.querySelector('#header'),
 pageContent = document.querySelector('#content'),
 pageFooter = document.querySelector('#footer'),
-list_li = document.querySelector('#items');
+menu_li = document.querySelector('#items');
 
 sidebarBtn.addEventListener('click', event => {
   sidebarBtn.classList.toggle('active');
@@ -754,7 +754,7 @@ pageFooter.addEventListener('click', event => {
   }
 });
 
-list_li.addEventListener('click', event => {
+menu_li.addEventListener('click', event => {
 
   if (sidebarBox.classList.contains('active')) {
     sidebarBtn.classList.remove('active');
