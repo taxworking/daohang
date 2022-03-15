@@ -1,48 +1,43 @@
-# 个人导航网站
-
-### Fork from
-[https://github.com/TopVitamin/static-nav](https://github.com/TopVitamin/static-nav)
-
-### 优化与负优化
-<ul>
-    <li>jQuery：<a href="https://jquery.com/" target="_blank" rel="noopener noreferrer">https://jquery.com/</a></li>
-    <li>Google fonts：<a href="https://fonts.google.com/" target="_blank"
-            rel="noopener noreferrer">https://fonts.google.com/</a></li>
-    <li>Google favicon API：<a href="https://www.google.cn/s2/favicons?domain_url=https://s.eallion.com/" target="_blank"
-            rel="noopener noreferrer">https://www.google.cn/s2/favicons?domain_url=https://s.eallion.com</a>
-    </li>
-    <li>今日诗词：<a href="https://www.jinrishici.com/" target="_blank"
-            rel="noopener noreferrer">https://www.jinrishici.com/</a></li>
-    <li>Umami 统计：<a href="https://github.com/mikecao/umami.git" target="_blank"
-            rel="noopener noreferrer">https://github.com/mikecao/umami.git</a></li>
-    <li>Baomitu CDN：<a href="https://cdn.baomitu.com/" target="_blank"
-            rel="noopener noreferrer">https://cdn.baomitu.com/</a></li>
-    <li>和风天气：<a href="https://www.qweather.com/" target="_blank" rel="noopener noreferrer">https://www.qweather.com/</a>
-    </li>
-    <li>Vanilla lazyload：<a href="https://github.com/verlok/vanilla-lazyload" target="_blank"
-            rel="noopener noreferrer">https://github.com/verlok/vanilla-lazyload</a></li>
-    <li>PWA：<a href="https://web.dev/progressive-web-apps/" target="_blank"
-            rel="noopener noreferrer">https://web.dev/progressive-web-apps/</a></li>
-    <li>Moment：<a href="https://github.com/moment/moment" target="_blank"
-            rel="noopener noreferrer">https://github.com/moment/moment</a></li>
-    <li>Lately：<a href="https://tokinx.github.io/lately/index-zh.html" target="_blank"
-            rel="noopener noreferrer">https://tokinx.github.io/lately/index-zh.html</a></li>
-    <li>Smooth scroll：<a href="https://github.com/mmkjony/jQuery.toTop" target="_blank"
-            rel="noopener noreferrer">https://github.com/mmkjony/jQuery.toTop</a></li>
-    <li>Toggle menu：<a href="https://codepen.io/Siddharth11/pen/vNEEZp" target="_blank"
-            rel="noopener noreferrer">https://codepen.io/Siddharth11/pen/vNEEZp</a></li>
-    <li>极客族：<a href="https://cdn.geekzu.org/cached.html" target="_blank"
-            rel="noopener noreferrer">https://cdn.geekzu.org/cached.html</a></li>
-    <li>腾讯云开发：<a href="https://cloud.tencent.com/product/tcb" target="_blank"
-            rel="noopener noreferrer">https://cloud.tencent.com/product/tcb</a></li>
-    <li>嘀咕 Talk：<a href="https://eallion.com/talk/" target="_blank"
-            rel="noopener noreferrer">https://eallion.com/talk/</a></li>
-    <li>腾讯公益 404：<a href="https://news.qq.com/404/" target="_blank"
-            rel="noopener noreferrer">https://news.qq.com/404/</a></li>
-</ul>
+# 蜗牛个人导航
 
 ### Live Demo
 - [https://s.eallion.com](https://s.eallion.com)
+
+### 关于
+
+最开始出于收藏导航的目的，收集了很多博客和网站，后来收集的内容越来越多，浏览器书签已经放不下了，而且当时还没有自己的电脑，就专门建立了一个个人导航网站。
+
+最原始的版本始于 2006 年，基于 [jobidc.com](http://eallion.jobidc.com/) 模板。详细（并不）的 ChangeLog 记录于此：[https://github.com/eallion/favorite/blob/main/changelog.md](https://github.com/eallion/favorite/blob/main/changelog.md)
+
+用各种各样的框架和模板折腾过导航网站：Wordpress、Typecho、Drupal、Dokuwiki、MDwiki、Hexo、Hugo、HTML。基本上还体验过 Google 和 GitHub 能搜索到的所有导航网站源码。因为个人导航网站的数据量非常小，现在使用的是一个纯静态的 HTML 模板。这套模板从 [https://github.com/TopVitamin/static-nav](https://github.com/TopVitamin/static-nav) fork 而来，不过基本上已完全重构，添加了一些个人需要的功能，做了一些优化。
+
+本站目前采用 VS Code 编辑，用 Git 管理，托管于 GitHub，通过 Vercel 构建部署。
+
+原始模板托管在 `master` 分支。https://github.com/eallion/favorite/tree/master 。可通过  [https://eallion.github.io/favorite](https://eallion.github.io/favorite/) 预览。
+
+本人热爱开源分享，欢迎探讨交流。但因为本站为个人使用，除非个人需要，一般不会有 Breaking Change，也没时间处理功能性需求。本站已开放源码，稍加修改即可部署使用。通过 Issue 和邮件提出的问题，我可能不及时，但一定会回复。
+### 优化与负优化
+
+ - 手机端适配
+ - 搜索框重构
+ - jQuery：<https://jquery.com/>
+ - Google fonts：<https://fonts.google.com/>
+ - Google favicon API：<https://www.google.cn/s2/favicons?domain_url=https://s.eallion.com/>
+ - 今日诗词：<https://www.jinrishici.com/>
+ - Umami 统计：<https://github.com/mikecao/umami.git>
+ - Baomitu CDN：<https://cdn.baomitu.com/>
+ - 和风天气：<https://www.qweather.com/>
+ - Vanilla lazyload：<https://github.com/verlok/vanilla-lazyload>
+ - PWA：<https://web.dev/progressive-web-apps/>
+ - Moment：<https://github.com/moment/moment>
+ - Lately：<https://tokinx.github.io/lately/index-zh.html>
+ - Smooth scroll：<https://github.com/mmkjony/jQuery.toTop>
+ - Toggle menu：<https://codepen.io/Siddharth11/pen/vNEEZp>
+ - 极客族：<https://cdn.geekzu.org/cached.html>
+ - 腾讯云开发：<https://cloud.tencent.com/product/tcb>
+ - 嘀咕 Talk：<https://eallion.com/talk/>
+ - 腾讯公益 404：<https://news.qq.com/404/>
+
 
 ### LICENSE
 ```
