@@ -1053,10 +1053,8 @@ ul.search-type li input:focus+label {
     vertical-align: middle;
 }
 
-.copyright {
-    align-items: center;
-    font-size: 1em;
-    line-height: 1.5em;
+.date {
+    display: inline;
 }
 
 /* 首页嘀咕样式 JSON 版 */
