@@ -394,7 +394,7 @@ document.getElementById('greetings').innerHTML = greet;
 // 和风天气
 WIDGET = {
   "CONFIG": {
-    "modules": "21043",
+    "modules": "1042",
     "background": "5",
     "tmpColor": "333333",
     "tmpSize": "16",
@@ -719,7 +719,9 @@ $('.to-top').toTop({
 // toggle menu
 const sidebarBox = document.querySelector('#box'),
 sidebarBtn = document.querySelector('#btn'),
-pageWrapper = document.querySelector('#page-wrapper'),
+pageHeader = document.querySelector('#header'),
+pageContent = document.querySelector('#content'),
+pageFooter = document.querySelector('#footer'),
 list_li = document.querySelector('#items');
 
 sidebarBtn.addEventListener('click', event => {
@@ -727,7 +729,23 @@ sidebarBtn.addEventListener('click', event => {
   sidebarBox.classList.toggle('active');
 });
 
-pageWrapper.addEventListener('click', event => {
+pageHeader.addEventListener('click', event => {
+
+  if (sidebarBox.classList.contains('active')) {
+    sidebarBtn.classList.remove('active');
+    sidebarBox.classList.remove('active');
+  }
+});
+
+pageContent.addEventListener('click', event => {
+
+  if (sidebarBox.classList.contains('active')) {
+    sidebarBtn.classList.remove('active');
+    sidebarBox.classList.remove('active');
+  }
+});
+
+pageFooter.addEventListener('click', event => {
 
   if (sidebarBox.classList.contains('active')) {
     sidebarBtn.classList.remove('active');

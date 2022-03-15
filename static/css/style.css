@@ -94,7 +94,7 @@ textarea {
     width: 75%;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 80% 20%;
+    grid-template-columns: 50% 50%;
     grid-column-gap: 10px;
     grid-row-gap: 10px;
     justify-items: start;
@@ -975,6 +975,9 @@ ul.search-type li input:focus+label {
     align-self: center;
     line-height: 1;
     position: relative;
+    justify-self: end;
+    padding-right: 10px;
+    text-align: center;
 }
 
 .about a {
@@ -1027,9 +1030,14 @@ ul.search-type li input:focus+label {
 .shici {
     padding-right: 2px;
 }
-
+#he-plugin-simple div [data-v-db6ccf64],
 #weather-view-he {
     display: none !important;
+}
+
+.qweather {
+    justify-self: end !important;
+    padding-right: 12px !important;
 }
 
 .s-sticker div[data-v-41ba7e2c]:not(:first-child):not(:last-child) {
@@ -1116,14 +1124,6 @@ ul.search-type li input:focus+label {
     fill: #f2f2f2;
     vertical-align: middle !important;
     margin: 10px 0 0 12px;
-}
-
-#page-wrapper {
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
 }
 
 #btn {
