@@ -92,10 +92,10 @@
                             <span class="type-text"></span>
                             <div class="s-type-list transition">
                                 <label for="type-google"><span class=emoji>🔍</span> 常用</label>
-                                <label for="type-163"><span class=emoji>🎵</span> 音乐</label>
-                                <label for="type-piaohua"><span class=emoji>🎞</span> 视频</label>
+                                <label for="type-spotify"><span class=emoji>🎵</span> 音乐</label>
+                                <label for="type-youtube"><span class=emoji>🎞</span> 视频</label>
                                 <label for="type-jd"><span class=emoji>🛒</span> 购物</label>
-                                <label for="type-pexels"><span class=emoji>🖼︎</span> 图片</label>
+                                <label for="type-google-images"><span class=emoji>🖼︎</span> 图片</label>
                                 <label for="type-csswinner"><span class=emoji>🖍︎</span> 设计</label>
                             </div>
                         </div>
@@ -127,19 +127,24 @@
                                     <label for="type-bing" class="metaColor transition">Bing</label>
                                 </li>
                                 <li>
+                                    <input checked="" type="radio" name="type" id="type-whois"
+                                        value="https://www.whois.com/whois/" data-placeholder="Free Whois Domain and IP Lookup" hidden="">
+                                    <label for="type-whois" class="metaColor transition">Whois</label>
+                                </li>
+                                <li>
+                                    <input checked="" type="radio" name="type" id="type-unsplash"
+                                        value="https://unsplash.com/search/" data-placeholder="优美免费无版权高清图片搜索" hidden="">
+                                    <label for="type-unsplash" class="metaColor transition">Unsplash</label>
+                                </li>
+                                <li>
+                                    <input checked="" type="radio" name="type" id="type-ping"
+                                        value="https://ping.chinaz.com/" data-placeholder="多个地点 PING 服务器，网站测速" hidden="">
+                                    <label for="type-ping" class="metaColor transition">PING</label>
+                                </li>
+                                <li>
                                     <input checked="" type="radio" name="type" id="type-baidu"
                                         value="https://www.baidu.com/s?wd=" data-placeholder="百度一下，你就知道！" hidden="">
                                     <label for="type-baidu" class="metaColor transition">百度</label>
-                                </li>
-                                <li>
-                                    <input checked="" type="radio" name="type" id="type-360"
-                                        value="https://www.so.com/s?q=" data-placeholder="360 搜索，SO 靠谱！" hidden="">
-                                    <label for="type-360" class="metaColor transition">360</label>
-                                </li>
-                                <li>
-                                    <input checked="" type="radio" name="type" id="type-sogou"
-                                        value="https://www.sogou.com/web?query=" data-placeholder="上网从搜狗开始！" hidden="">
-                                    <label for="type-sogou" class="metaColor transition">搜狗</label>
                                 </li>
                                 <li>
                                     <input checked="" type="radio" name="type" id="type-douban"
@@ -157,28 +162,21 @@
                             <span class="type-text metaColor">图片</span>
                             <ul class="search-type">
                                 <li>
-                                    <input checked="" type="radio" name="type" id="type-pexels"
-                                        value="https://www.pexels.com/search/" data-placeholder="Pexels免费图库搜索"
-                                        hidden="">
-                                    <label for="type-pexels" class="metaColor transition">Pexels</label>
-                                </li>
-                                <li>
-                                    <input checked="" type="radio" name="type" id="type-hellorf"
-                                        value="https://www.hellorf.com/photo/search/all/" data-placeholder="海洛正版图库"
-                                        hidden="">
-                                    <label for="type-hellorf" class="metaColor transition">海洛</label>
-                                </li>
-                                <li>
-                                    <input checked="" type="radio" name="type" id="type-baidu-images"
-                                        value="https://image.baidu.com/search/index?tn=baiduimage&amp;ps=1&amp;ct=201326592&amp;lm=-1&amp;cl=2&amp;nc=1&amp;ie=utf-8&amp;word="
-                                        data-placeholder="百度图片搜索" hidden="">
-                                    <label for="type-baidu-images" class="metaColor transition">百度</label>
-                                </li>
-                                <li>
                                     <input checked="" type="radio" name="type" id="type-google-images"
                                         value="https://www.google.com/search?newwindow=1&amp;safe=strict&amp;biw=1542&amp;bih=956&amp;tbm=isch&amp;sa=1&amp;q="
                                         data-placeholder="Google图片搜索" hidden="">
                                     <label for="type-google-images" class="metaColor transition">Google</label>
+                                </li>
+                                <li>
+                                    <input checked="" type="radio" name="type" id="type-unsplash"
+                                        value="https://unsplash.com/search/" data-placeholder="优美免费无版权高清图片搜索" hidden="">
+                                    <label for="type-unsplash" class="metaColor transition">Unsplash</label>
+                                </li>
+                                <li>
+                                    <input checked="" type="radio" name="type" id="type-pexels"
+                                        value="https://www.pexels.com/search/" data-placeholder="Pexels免费图库搜索"
+                                        hidden="">
+                                    <label for="type-pexels" class="metaColor transition">Pexels</label>
                                 </li>
                                 <li>
                                     <input checked="" type="radio" name="type" id="type-bing-images"
@@ -193,9 +191,16 @@
                                     <label for="type-500px" class="metaColor transition">500PX</label>
                                 </li>
                                 <li>
-                                    <input checked="" type="radio" name="type" id="type-unsplash"
-                                        value="https://unsplash.com/search/" data-placeholder="优美免费无版权高清图片搜索" hidden="">
-                                    <label for="type-unsplash" class="metaColor transition">Unsplash</label>
+                                    <input checked="" type="radio" name="type" id="type-baidu-images"
+                                        value="https://image.baidu.com/search/index?tn=baiduimage&amp;ps=1&amp;ct=201326592&amp;lm=-1&amp;cl=2&amp;nc=1&amp;ie=utf-8&amp;word="
+                                        data-placeholder="百度图片搜索" hidden="">
+                                    <label for="type-baidu-images" class="metaColor transition">百度</label>
+                                </li>
+                                <li>
+                                    <input checked="" type="radio" name="type" id="type-hellorf"
+                                        value="https://www.hellorf.com/photo/search/all/" data-placeholder="海洛正版图库"
+                                        hidden="">
+                                    <label for="type-hellorf" class="metaColor transition">海洛</label>
                                 </li>
                             </ul>
                         </div>
