@@ -119,12 +119,12 @@ textarea {
     text-indent: 2em;
 }
 
-.content-about p img:not(:first-child):not(:last-child){
-    padding: 0 1px !important;
-}
-
 .badge {
     text-indent: 0 !important;
+}
+
+.badge img {
+    padding: 0 2px 0 0 !important;
 }
 
 .content-about blockquote {
