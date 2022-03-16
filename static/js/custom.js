@@ -801,7 +801,6 @@ $(".scrollTo").on('click', function (e) {
 
 // 提交搜索后清空输入框
 document.querySelector('form').onsubmit = e => {
-  e.target.submit();
   e.target.reset();
   return false;
 };
