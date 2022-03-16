@@ -1414,4 +1414,12 @@ ul.search-type li input:focus+label {
     .qweather {
         padding-right: 0px !important;
     }
+
+    .badge {
+        text-indent: 0 !important;
+    }
+
+    .highlight {
+        padding-left: 0 !important;
+    }
 }
