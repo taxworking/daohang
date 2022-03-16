@@ -119,16 +119,16 @@ textarea {
     text-indent: 2em;
 }
 
+.badge {
+    text-indent: 0 !important;
+}
+
 .content-about blockquote {
     margin-left: 2em !important;
 }
 
 .content-about blockquote p {
     text-indent: 0;
-}
-
-.highlight {
-    padding-left: 2em;
 }
 
 .content-about ul li {
@@ -1413,10 +1413,6 @@ ul.search-type li input:focus+label {
 
     .qweather {
         padding-right: 0px !important;
-    }
-
-    .badge {
-        text-indent: 0 !important;
     }
 
     .highlight {
