@@ -120,7 +120,7 @@ textarea {
 }
 
 .content-about p img:not(:first-child):not(:last-child){
-    padding: 0 1px;
+    padding: 0 1px !important;
 }
 
 .badge {
