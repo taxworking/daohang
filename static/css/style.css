@@ -694,6 +694,24 @@ li.whois {
     padding: 20px;
 }
 
+#search button {
+    position: absolute;
+    top: 68px;
+    right: 32px;
+    background: transparent;
+    border: 0!important;
+    width: unset;
+    height: unset;
+    font-size: 24px;
+}
+
+#search button:hover {
+    cursor: pointer;
+    font-size: 32px;
+    top: 64px;
+    right: 28px;
+}
+
 .search-group {
     padding-left: 72px;
     display: none;
@@ -834,8 +852,7 @@ span.type-text,
 #search select,
 #search textarea {
     background-color: #F4F9FF;
-    border-bottom-left-radius: 20px;
-    border-top-left-radius: 20px;
+    border-radius: 20px;
 }
 
 #search input:focus,
