@@ -1,6 +1,10 @@
 # Change Log 
 > *本站源码*：[https://github.com/eallion/favorite](https://github.com/eallion/favorite)
 
+### Ver 6.0
+> Update: 2022.03.15 [6b5c436b69201f5b6e9b4a7b3aa1567a12969d4f](https://github.com/eallion/favorite/commit/6b5c436b69201f5b6e9b4a7b3aa1567a12969d4f)
+- 重构
+
 ### Ver 5.3.1
 > Update: 2021.06.16 [a1f30aa1ffdaa913b9425e2202fa777db9c64157](https://github.com/eallion/favorite/commit/a1f30aa1ffdaa913b9425e2202fa777db9c64157)
 
