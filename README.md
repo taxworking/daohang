@@ -33,6 +33,7 @@
  - Lately：<https://tokinx.github.io/lately/index-zh.html>
  - Smooth scroll：<https://github.com/mmkjony/jQuery.toTop>
  - Toggle menu：<https://codepen.io/Siddharth11/pen/vNEEZp>
+ - Dark mode: <https://github.com/coliff/dark-mode-switch>
  - 极客族：<https://cdn.geekzu.org/cached.html>
  - 腾讯云开发：<https://cloud.tencent.com/product/tcb>
  - 嘀咕 Talk：<https://eallion.com/talk/>

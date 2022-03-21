@@ -109,6 +109,7 @@ textarea {
     width: 75% !important;
     margin: 0 auto;
 }
+
 .content-about {
     padding: 30px 0;
     min-height: 600px;
@@ -703,7 +704,7 @@ li.whois {
     top: 68px;
     right: 32px;
     background: transparent;
-    border: 0!important;
+    border: 0 !important;
     width: unset;
     height: unset;
     font-size: 24px;
@@ -1004,6 +1005,10 @@ ul.search-type li input:focus+label {
     padding: 0 8px 0 3px;
 }
 
+.last-about {
+    padding-right: 65px !important;
+}
+
 .about a:hover {
     color: #1890ff;
 }
@@ -1011,11 +1016,6 @@ ul.search-type li input:focus+label {
 .about span {
     font-size: 16px;
     padding: 0 10px 0 2px;
-}
-
-.about svg {
-    width: 1em;
-    height: 1em;
 }
 
 .poem a:hover {
@@ -1161,12 +1161,34 @@ ul.search-type li input:focus+label {
     transition: transform 500ms cubic-bezier(0.6, 0.05, 0.28, 0.91), opacity 500ms, background-color 250ms;
 }
 
+#btn:hover div {
+    width: 22px;
+}
+
+#btn:hover div::after {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: 24px;
+    width: 3px;
+    height: 2px;
+    background-color: rgba(49, 70, 89, 1);
+}
+
 #btn.active {
     right: 15px;
 }
 
 #btn.active div {
     background-color: #1890ff;
+}
+
+#btn.active:hover div {
+    width: 28px;
+}
+
+#btn.active:hover div::after {
+    background-color: transparent;
 }
 
 #btn.active #top {
@@ -1180,6 +1202,14 @@ ul.search-type li input:focus+label {
 
 #btn.active #bottom {
     transform: translateY(-10px) rotate(-45deg);
+}
+
+#btn.active:hover #top {
+    transform: translateY(10px) rotate(225deg);
+}
+
+#btn.active:hover #bottom {
+    transform: translateY(-10px) rotate(315deg);
 }
 
 #box {
@@ -1273,6 +1303,78 @@ ul.search-type li input:focus+label {
 #box {
     will-change: transform, opacity;
 }
+
+.darkmode {
+    padding: 0;
+    position: absolute;
+    margin: 0;
+    top: 50%;
+    right: 9px;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.dark_checkbox {
+    padding: 0;
+    position: absolute;
+}
+
+.dark_checkbox input[type=checkbox] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -webkit-tap-highlight-color: transparent;
+    cursor: pointer;
+}
+
+.dark_checkbox input[type=checkbox]:focus {
+    outline: 0;
+}
+
+.dark_label {
+    width: 28px;
+    height: 14px;
+    background-color: #333;
+    display: flex;
+    border-radius: 50px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2px;
+    position: relative;
+    transform: scale(1.5);
+}
+
+.dark_ball {
+    width: 10px;
+    height: 10px;
+    background-color: #f2f2f2;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    border-radius: 50%;
+    transition: transform 0.2s linear;
+}
+
+/*  target the elemenent after the label*/
+.dark_checkbox:checked+.dark_label .dark_ball {
+    transform: translateX(14px);
+}
+
+.fa-moon {
+    color: midnightblue;
+}
+
+.fa-sun {
+    color: gold;
+}
+
+.fa-moon,
+.fa-sun {
+padding-bottom: 5px;
+}
+
 /*-----------------------------简洁版样式定义- 结束---------------------------------------------------*/
 /*-----------------------------手机自适应---------------------------------------------------*/
 @media screen and (max-device-width: 1259px) {
@@ -1343,13 +1445,22 @@ ul.search-type li input:focus+label {
         display: none !important;
     }
 
-    .poem,
-    .about {
+    .poem {
         display: none !important;
+    }
+
+    .about svg,
+    .about a {
+        display: none !important;
+    }
+
+    .darkmode svg {
+        display: inline-block !important;
     }
 
     .title {
         text-align: center;
+        justify-self: center;
     }
 
     .logo-box {
@@ -1376,6 +1487,13 @@ ul.search-type li input:focus+label {
         padding: 10px 0;
     }
 
+
+    #search button,
+    #search button:hover {
+        top: 20px;
+        right: 10px;
+    }
+
     #search-list,
     .s-type-list {
         display: none;
@@ -1397,11 +1515,16 @@ ul.search-type li input:focus+label {
         padding: 20px 0 30px;
     }
 
+    #box {
+        right: -90px;
+        width: 90px;
+    }
+
     #box ul li:last-child {
         display: none !important;
     }
 
-    #box ul li:first-child{
+    #box ul li:first-child {
         display: none !important;
     }
 
@@ -1412,7 +1535,8 @@ ul.search-type li input:focus+label {
     .header-grid {
         width: 100%;
         margin: 0 auto;
-        display: inline-block !important;
+        grid-template-columns: 85% 15%;
+        justify-items: center;
     }
 
     .qweather {
@@ -1421,5 +1545,9 @@ ul.search-type li input:focus+label {
 
     .highlight {
         padding-left: 0 !important;
+    }
+
+    .darkmode {
+        padding: 4px 15px 0 0;
     }
 }
