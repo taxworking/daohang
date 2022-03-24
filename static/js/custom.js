@@ -393,6 +393,7 @@ else if (hrs >= 18 && hrs <= 24)
 document.getElementById('greetings').innerHTML = greet;
 
 // 和风天气
+/*
 WIDGET = {
   "CONFIG": {
     "modules": "1042",
@@ -415,31 +416,165 @@ WIDGET = {
     "key": "b31457ad265f42d0ae71b36f4b04b40e"
   }
 }
-
+*/
 // 今日诗词
-/*
 var xhr = new XMLHttpRequest();
-xhr.open('get', 'https://v1.jinrishici.com/all.json');
+xhr.open('get', 'https://v2.jinrishici.com/one.json');
 xhr.onreadystatechange = function () {
-    if (xhr.readyState === 4) {
-    var data = JSON.parse(xhr.responseText);
+  if (xhr.readyState === 4) {
+    var result = JSON.parse(xhr.responseText);
     var gushici = document.getElementById('gushici');
     var poem_info = document.getElementById('poem_info');
-    gushici.innerHTML ='<a href="https://www.google.com/search?q=' + data.content + '" target="_blank" rel="noopener noreferrer">' +data.content + '</a>';
-    poem_info.innerHTML = '— ' + '<a href="https://www.google.com/search?q=' + data.author + ' ' + data.origin + '" target="_blank" rel="noopener noreferrer">' + '【' + data.origin.dynasty + '】' + data.author + '《' + data.origin + '》' + '</a>';
-    }
+    gushici.innerHTML = '<a href="https://www.google.com/search?q=' + result.data.content + '" target="_blank" rel="noopener noreferrer">' + result.data.content + '</a>';
+    poem_info.innerHTML = '— ' + '<a href="https://www.google.com/search?q=' + result.data.origin.author + ' ' + result.data.origin.title + '" target="_blank" rel="noopener noreferrer">' + '【' + result.data.origin.dynasty + '】' + result.data.origin.author + '《' + result.data.origin.title + '》' + '</a>';
+  }
 };
 xhr.send();
-*/
 
 // 今日诗词 v2
+/*
 jinrishici.load(function (result) {
   var sentence = document.querySelector("#gushici")
   var info = document.querySelector("#poem_info")
   sentence.innerHTML = '<a href="https://www.google.com/search?q=' + result.data.content + '" target="_blank" rel="noopener noreferrer">' + result.data.content + '</a>'
   info.innerHTML = '-' + '<a href="https://www.google.com/search?q=' + result.data.origin.author + ' ' + result.data.origin.title + '" target="_blank" rel="noopener noreferrer">' + '【' + result.data.origin.dynasty + '】' + result.data.origin.author + '《' + result.data.origin.title + '》' + '</a>'
 });
+*/
 
+// 今日诗词天气api
+var weather = new XMLHttpRequest();
+weather.open('get', 'https://v2.jinrishici.com/info');
+weather.onreadystatechange = function () {
+  if (weather.readyState === 4) {
+    var result = JSON.parse(weather.responseText);
+    var jw_region = document.querySelector('#jw_region');
+    var jw_temperature = document.querySelector('#jw_temperature');
+    var jw_pm25tip = document.querySelector('#jw_pm25tip');
+    var jw_wtip = document.querySelector('#jw_wtip');
+    var region = result.data.region.match(/\|(\S*)/)[1];
+    jw_region.innerHTML = '<a href="https://www.google.com/search?q=天气+' + region + '" target="_blank" rel="noopener noreferrer">' + region + '</a>';
+    jw_temperature.innerHTML = result.data.weatherData.temperature + '℃';
+    var jw_weather = result.data.weatherData.weather;
+    var jw_w
+    if (jw_weather == "晴") {
+      jw_w = jw_weather.replace("晴", "☀️");
+    } else if (jw_weather == "多云") {
+      jw_w = jw_weather.replace("多云", "⛅️");
+    } else if (jw_weather == "阴") {
+      jw_w = jw_weather.replace("阴", "☁️");
+    } else if (jw_weather == "雨") {
+      jw_w = jw_weather.replace("雨", "🌧️");
+    } else if (jw_weather == "雪") {
+      jw_w = jw_weather.replace("雪", "❄️");
+    } else if (jw_weather == "雷阵雨") {
+      jw_w = jw_weather.replace("雷阵雨", "⛈️");
+    } else if (jw_weather == "雷阵雨伴有冰雹") {
+      jw_w = jw_weather.replace("雷阵雨伴有冰雹", "⛈️");
+    } else if (jw_weather == "雨夹雪") {
+      jw_w = jw_weather.replace("雨夹雪", "🌧️");
+    } else if (jw_weather == "小雨") {
+      jw_w = jw_weather.replace("小雨", "🌦️");
+    } else if (jw_weather == "中雨") {
+      jw_w = jw_weather.replace("中雨", "🌦️");
+    } else if (jw_weather == "大雨") {
+      jw_w = jw_weather.replace("大雨", "🌦️");
+    } else if (jw_weather == "暴雨") {
+      jw_w = jw_weather.replace("暴雨", "🌦️");
+    } else if (jw_weather == "大暴雨") {
+      jw_w = jw_weather.replace("大暴雨", "🌦️");
+    } else if (jw_weather == "特大暴雨") {
+      jw_w = jw_weather.replace("特大暴雨", "🌦️");
+    } else if (jw_weather == "阵雪") {
+      jw_w = jw_weather.replace("阵雪", "❄️");
+    } else if (jw_weather == "小雪") {
+      jw_w = jw_weather.replace("小雪", "❄️");
+    } else if (jw_weather == "中雪") {
+      jw_w = jw_weather.replace("中雪", "❄️");
+    } else if (jw_weather == "大雪") {
+      jw_w = jw_weather.replace("大雪", "❄️");
+    } else if (jw_weather == "暴雪") {
+      jw_w = jw_weather.replace("暴雪", "❄️");
+    } else if (jw_weather == "雾") {
+      jw_w = jw_weather.replace("雾", "🌫️");
+    } else if (jw_weather == "冻雨") {
+      jw_w = jw_weather.replace("冻雨", "🌧️");
+    } else if (jw_weather == "沙尘暴") {
+      jw_w = jw_weather.replace("沙尘暴", "🌫️");
+    } else if (jw_weather == "小雨-中雨") {
+      jw_w = jw_weather.replace("小雨-中雨", "🌦️");
+    } else if (jw_weather == "中雨-大雨") {
+      jw_w = jw_weather.replace("中雨-大雨", "🌦️");
+    } else if (jw_weather == "大雨-暴雨") {
+      jw_w = jw_weather.replace("大雨-暴雨", "🌦️");
+    } else if (jw_weather == "暴雨-大暴雨") {
+      jw_w = jw_weather.replace("暴雨-大暴雨", "🌦️");
+    } else if (jw_weather == "大暴雨-特大暴雨") {
+      jw_w = jw_weather.replace("大暴雨-特大暴雨", "🌦️");
+    } else if (jw_weather == "小雪-中雪") {
+      jw_w = jw_weather.replace("小雪-中雪", "❄️");
+    } else if (jw_weather == "中雪-大雪") {
+      jw_w = jw_weather.replace("中雪-大雪", "❄️");
+    } else if (jw_weather == "大雪-暴雪") {
+      jw_w = jw_weather.replace("大雪-暴雪", "❄️");
+    } else if (jw_weather == "沙尘") {
+      jw_w = jw_weather.replace("沙尘", "🌫️");
+    } else if (jw_weather == "浮尘") {
+      jw_w = jw_weather.replace("浮尘", "🌫️");
+    } else if (jw_weather == "扬沙") {
+      jw_w = jw_weather.replace("扬沙", "🌫️");
+    } else if (jw_weather == "强沙尘暴") {
+      jw_w = jw_weather.replace("强沙尘暴", "🌫️");
+    } else if (jw_weather == "霾") {
+      jw_w = jw_weather.replace("霾", "🌫️");
+    } else if (jw_weather == "轻度雾霾") {
+      jw_w = jw_weather.replace("轻度雾霾", "🌫️");
+    } else if (jw_weather == "中度雾霾") {
+      jw_w = jw_weather.replace("中度雾霾", "🌫️");
+    } else if (jw_weather == "重度雾霾") {
+      jw_w = jw_weather.replace("重度雾霾", "🌫️");
+    } else if (jw_weather == "风") {
+      jw_w = jw_weather.replace("风", "🌪️");
+    } else if (jw_weather == "大风") {
+      jw_w = jw_weather.replace("大风", "🌪️");
+    } else if (jw_weather == "飓风") {
+      jw_w = jw_weather.replace("飓风", "🌪️");
+    } else if (jw_weather == "热带风暴") {
+      jw_w = jw_weather.replace("热带风暴", "🌪️");
+    } else if (jw_weather == "龙卷风") {
+      jw_w = jw_weather.replace("龙卷风", "🌪️");
+    } else if (jw_weather == "阵雨") {
+      jw_w = jw_weather.replace("阵雨", "🌦️");
+    } else {
+      jw_w = jw_weather.replace("阵雨", "🌤️");
+    }
+    document.querySelector('#jw_weather').innerHTML = jw_w;
+    jw_wtip.innerHTML = '实时天气：' + jw_weather;
+    jw_pm25tip.innerHTML = '空气质量：' + result.data.weatherData.pm25;
+    var pm25 = result.data.weatherData.pm25;
+    var jw_pm25;
+    if (pm25 >= 0 && pm25 <= 50) {
+      jw_pm25 = '优';
+      $('#jw_pm25,#jw_pm25tip').addClass('green');
+    } else if (pm25 >= 51 && pm25 <= 100) {
+      jw_pm25 = '良';
+      $('#jw_pm25,#jw_pm25tip').addClass('yellow');
+    } else if (pm25 >= 101 && pm25 <= 150) {
+      jw_pm25 = '轻度污染';
+      $('#jw_pm25,#jw_pm25tip').addClass('orange');
+    } else if (pm25 >= 151 && pm25 <= 200) {
+      jw_pm25 = '中度污染';
+      $('#jw_pm25,#jw_pm25tip').addClass('red');
+    } else if (pm25 >= 201 && pm25 <= 300) {
+      jw_pm25 = '重度污染';
+      $('#jw_pm25,#jw_pm25tip').addClass('purple');
+    } else if (pm25 > 300) {
+      jw_pm25 = '严重污染';
+      $('#jw_pm25,#jw_pm25tip').addClass('maroon');
+    }
+    document.querySelector('#jw_pm25').innerHTML = jw_pm25;
+  }
+};
+weather.send();
 
 // latest search box
 if (jQuery(".comment_stars a").click((function () {
@@ -838,8 +973,9 @@ function initTheme() {
     localStorage.getItem("darkSwitch") === "dark";
   darkSwitch.checked = darkThemeSelected;
   darkThemeSelected
-    ? document.body.setAttribute("data-theme", "dark")
-    : document.body.removeAttribute("data-theme");
+    ?
+    document.body.setAttribute("data-theme", "dark") :
+    document.body.removeAttribute("data-theme");
 }
 
 /**

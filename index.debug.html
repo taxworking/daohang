@@ -20,11 +20,8 @@
     <link rel="shortcut icon" href="static/img/favicon.ico">
     <link crossorigin="anonymous" integrity="sha384-i/ZLCOBtDmoxztrtShNvc3vGe1+IbOGDzkZNC4KLXurv/BT7QInnM2AsPnvbgXH/"
         href="https://lib.baomitu.com/normalize/5.0.0/normalize.min.css" rel="stylesheet">
-    <link
-        href="https://fonts.geekzu.org/css2?family=Ma+Shan+Zheng&family=Noto+Sans+SC&family=Noto+Serif+SC&display=swap"
-        rel="stylesheet">
-    <link href="static/css/style.css" rel="stylesheet" type="text/css">
-    <link href="static/css/dark.css" rel="stylesheet" type="text/css">
+    <link href="static/css/style.min.css" rel="stylesheet" type="text/css">
+    <link href="static/css/dark.min.css" rel="stylesheet" type="text/css">
     <!--[if lt IE 9]><script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script><![endif]-->
 </head>
 
@@ -53,16 +50,18 @@
                 </svg><a href="https://github.com/eallion/favorite" target="_blank" rel="noopener noreferrer"
                     class="last-about">GitHub</a>
                 <div class="darkmode">
-                    <input type="checkbox" class="dark_checkbox" id="darkSwitch">
+                    <input type="checkbox" class="dark_checkbox" id="darkSwitch" aria-label="darkSwitch">
                     <label for="darkSwitch" class="dark_label">
-                        <i class="fa-moon"><svg xmlns="http://www.w3.org/2000/svg" height="11" width="11" viewBox="0 0 512 512">
+                        <i class="fa-moon"><svg xmlns="http://www.w3.org/2000/svg" height="11" width="11"
+                                viewBox="0 0 512 512">
                                 <path
                                     d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z" />
-                                </svg></i>
-                        <i class='fa-sun'><svg xmlns="http://www.w3.org/2000/svg" height="10" width="10" viewBox="0 0 512 512">
+                            </svg></i>
+                        <i class='fa-sun'><svg xmlns="http://www.w3.org/2000/svg" height="10" width="10"
+                                viewBox="0 0 512 512">
                                 <path
                                     d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z" />
-                                </svg></i>
+                            </svg></i>
                         <div class='dark_ball'>
                     </label>
                 </div>
@@ -115,8 +114,13 @@
                     <div class="poem"><span class="shici">🕮</span><span id="gushici"
                             class="poem_sentence">正在加载古诗词......</span><span id="poem_info" class="poem_info"></span>
                     </div>
-                    <div class="qweather">
-                        <span id="he-plugin-simple"></span>
+                    <div id="jweather" class="jweather">
+                        <span id="jw_region"></span>
+                        <span id="jw_temperature"></span>
+                        <span id="jw_weather" class="emoji jw_weather"></span>
+                        <span id="jw_wtip" class="jw_tip jw_wtip"></span>
+                        <span id="jw_pm25" class="jw_pm25"></span>
+                        <span id="jw_pm25tip" class="jw_tip"></span>
                     </div>
                 </div>
             </div>
@@ -543,7 +547,7 @@
                         </li>
                         <li><a
                                 href="https://cloud.tencent.com/redirect.php?redirect=1005&amp;cps_key=1f05a4ef7955bfdbc954f3f0a115c2e3"><img
-                                    class="lazy" loading="lazy"
+                                    class="lazy" alt="favicon" loading="lazy"
                                     data-src="https://www.google.cn/s2/favicons?domain_url=https://cloud.tencent.com">腾讯云</a>
                         </li>
                         <li><a href="https://cloud.baidu.com/"><img class="lazy" alt="favicon" loading="lazy"
@@ -1922,7 +1926,7 @@
         <p>&copy;2022 <a href="https://eallion.com" target="_blank" rel="noopener noreferrer">eallion.com</a>, All
             Rights Reserved.</p>
     </footer>
-    <a href="javascript:void(0)" class="to-top back-to-top"><svg t="1647144384541" class="icon" viewBox="0 0 1024 1024"
+    <a href="javascript:void(0)" class="to-top back-to-top" aria-label="back to top"><svg t="1647144384541" class="icon" viewBox="0 0 1024 1024"
             version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3569" width="16" height="16">
             <path
                 d="M890.5 755.3L537.9 269.2c-12.8-17.6-39-17.6-51.7 0L133.5 755.3c-3.8 5.3-0.1 12.7 6.5 12.7h75c5.1 0 9.9-2.5 12.9-6.6L512 369.8l284.1 391.6c3 4.1 7.8 6.6 12.9 6.6h75c6.5 0 10.3-7.4 6.5-12.7z"
@@ -1937,9 +1941,7 @@
     <script crossorigin="anonymous"
         integrity="sha512-lVcnjCLGjJTaZU55wD7H3f8SJVi6VV5cQRcmGuYcyIY607N/rzZGEl90lNgsiEhKygATryG/i6e5u2moDFs5kQ=="
         src="https://lib.baomitu.com/vanilla-lazyload/17.3.1/lazyload.min.js"></script>
-    <script src="//sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8" type="text/javascript"></script>
     <script type="text/javascript" src="static/js/custom.min.js" id="custom-js"></script>
-    <script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0"></script>
     <meta name="apple-mobile-web-app-capable" content="yes">
     <script>
         // Check that service workers are registered

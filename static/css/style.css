@@ -2,7 +2,7 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Noto Sans SC', sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -93,7 +93,9 @@ textarea {
 .header-grid {
     width: 75%;
     margin: 0 auto;
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 50% 50%;
     grid-template-columns: 50% 50%;
     grid-column-gap: 10px;
     grid-row-gap: 10px;
@@ -388,7 +390,6 @@ li.whois {
     color: #fff;
     font-size: 18px;
     text-align: center;
-    font-family: 'Noto Sans SC', sans-serif;
     border: 1px solid #1890ff;
     cursor: pointer;
 }
@@ -972,14 +973,19 @@ ul.search-type li input:focus+label {
 
 .grid {
     display: grid;
+    display: -ms-grid;
     grid-template-columns: repeat(2, 1fr);
+    -ms-grid-columns: repeat(2, 1fr);
     grid-gap: 10px;
 }
 
 .container {
     display: grid;
+    display: -ms-grid;
     grid-template-columns: 22% 60% 18%;
+    -ms-grid-columns: 22% 60% 18%;
     grid-template-rows: auto;
+    -ms-grid-row: auto;
     grid-column-gap: 10px;
     grid-row-gap: 10px;
     justify-items: start;
@@ -1030,8 +1036,10 @@ ul.search-type li input:focus+label {
 }
 
 .poem_sentence a {
-    font-family: 'Ma Shan Zheng', cursive !important;
-    font-size: 1.125em;
+    font: normal 1.125em / 150% STSong, SimSun, NSimSun, Arial, sans-serif;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
 }
 
 .poem_info {
@@ -1051,18 +1059,75 @@ ul.search-type li input:focus+label {
     padding-right: 2px;
 }
 
-#he-plugin-simple div [data-v-db6ccf64],
-#weather-view-he {
-    display: none !important;
-}
-
-.qweather {
+.jweather {
     justify-self: end !important;
-    padding-right: 12px !important;
+    padding-right: 22px !important;
 }
 
-.s-sticker div[data-v-41ba7e2c]:not(:first-child):not(:last-child) {
-    padding: 0 2px !important;
+.jweather a:hover {
+    color: #1890ff;
+}
+
+.jw_weather {
+    font-size: 1.25em;
+}
+
+.jw_weather,
+.jw_pm25 {
+    position: relative;
+}
+
+.jw_weather:hover,
+.jw_pm25:hover {
+    cursor: pointer;
+}
+
+.jw_pm25:hover {
+    background: #333;
+    color: White;
+}
+
+.jw_wtip,
+.jw_tip {
+    display: none;
+    position: absolute;
+    background: #fff;
+    color: #333;
+    z-index: 100;
+    text-align: right;
+    top: 30px;
+    right: 0px;
+    font-size: small;
+}
+
+.jw_weather:hover+.jw_tip,
+.jw_pm25:hover+.jw_tip {
+    display: block;
+    background: transparent;
+}
+
+.green {
+    color: green;
+}
+
+.yellow {
+    color: yellow;
+}
+
+.orange {
+    color: orange;
+}
+
+.red {
+    color: red;
+}
+
+.purple {
+    color: purple;
+}
+
+.maroon {
+    color: maroon;
 }
 
 .greeting {
@@ -1371,9 +1436,12 @@ ul.search-type li input:focus+label {
     color: gold;
 }
 
-.fa-moon,
+.fa-moon {
+    padding-bottom: 1px;
+}
+
 .fa-sun {
-padding-bottom: 5px;
+    padding-bottom: 2px;
 }
 
 /*-----------------------------简洁版样式定义- 结束---------------------------------------------------*/
@@ -1439,6 +1507,7 @@ padding-bottom: 5px;
     }
 
     .container {
+        -ms-grid-columns: 50% 50%;
         grid-template-columns: 50% 50%;
     }
 
@@ -1537,10 +1606,11 @@ padding-bottom: 5px;
         width: 100%;
         margin: 0 auto;
         grid-template-columns: 85% 15%;
+        -ms-grid-columns: 85% 15%;
         justify-items: center;
     }
 
-    .qweather {
+    .jweather {
         padding-right: 0px !important;
     }
 
