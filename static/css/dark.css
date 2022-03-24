@@ -26,9 +26,12 @@
   color: #adbac7 !important;
 }
 
-[data-theme="dark"] #btn div,
-[data-theme="dark"]  #btn:hover div::after {
+[data-theme="dark"] #btn div {
   background-color: #adbac7 !important;
+}
+
+[data-theme="dark"]  #btn:hover div::after {
+  background-color: transparent !important;
 }
 
 [data-theme="dark"] #btn.active div {

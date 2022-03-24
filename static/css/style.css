@@ -1177,6 +1177,7 @@ ul.search-type li input:focus+label {
 
 #btn.active {
     right: 15px;
+    max-width: 30px;
 }
 
 #btn.active div {
