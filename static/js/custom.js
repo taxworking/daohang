@@ -468,8 +468,6 @@ weather.onreadystatechange = function () {
       jw_w = jw_weather.replace("雪", "❄️");
     } else if (jw_weather == "雷阵雨") {
       jw_w = jw_weather.replace("雷阵雨", "⛈️");
-    } else if (jw_weather == "雷阵雨伴有冰雹") {
-      jw_w = jw_weather.replace("雷阵雨伴有冰雹", "⛈️");
     } else if (jw_weather == "雨夹雪") {
       jw_w = jw_weather.replace("雨夹雪", "🌧️");
     } else if (jw_weather == "小雨") {
@@ -500,22 +498,6 @@ weather.onreadystatechange = function () {
       jw_w = jw_weather.replace("冻雨", "🌧️");
     } else if (jw_weather == "沙尘暴") {
       jw_w = jw_weather.replace("沙尘暴", "🌫️");
-    } else if (jw_weather == "小雨-中雨") {
-      jw_w = jw_weather.replace("小雨-中雨", "🌦️");
-    } else if (jw_weather == "中雨-大雨") {
-      jw_w = jw_weather.replace("中雨-大雨", "🌦️");
-    } else if (jw_weather == "大雨-暴雨") {
-      jw_w = jw_weather.replace("大雨-暴雨", "🌦️");
-    } else if (jw_weather == "暴雨-大暴雨") {
-      jw_w = jw_weather.replace("暴雨-大暴雨", "🌦️");
-    } else if (jw_weather == "大暴雨-特大暴雨") {
-      jw_w = jw_weather.replace("大暴雨-特大暴雨", "🌦️");
-    } else if (jw_weather == "小雪-中雪") {
-      jw_w = jw_weather.replace("小雪-中雪", "❄️");
-    } else if (jw_weather == "中雪-大雪") {
-      jw_w = jw_weather.replace("中雪-大雪", "❄️");
-    } else if (jw_weather == "大雪-暴雪") {
-      jw_w = jw_weather.replace("大雪-暴雪", "❄️");
     } else if (jw_weather == "沙尘") {
       jw_w = jw_weather.replace("沙尘", "🌫️");
     } else if (jw_weather == "浮尘") {
@@ -545,7 +527,7 @@ weather.onreadystatechange = function () {
     } else if (jw_weather == "阵雨") {
       jw_w = jw_weather.replace("阵雨", "🌦️");
     } else {
-      jw_w = jw_weather.replace("阵雨", "🌤️");
+      jw_w = jw_weather.replace(/[.*+?^${}()|[\]\\]/g, "🌤️");
     }
     document.querySelector('#jw_weather').innerHTML = jw_w;
     jw_wtip.innerHTML = '实时天气：' + jw_weather;
