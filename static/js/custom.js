@@ -536,22 +536,22 @@ weather.onreadystatechange = function () {
     var jw_pm25;
     if (pm25 >= 0 && pm25 <= 50) {
       jw_pm25 = '优';
-      $('#jw_pm25,#jw_pm25tip').addClass('green');
+      $('#jw_pm25').addClass('green');
     } else if (pm25 >= 51 && pm25 <= 100) {
       jw_pm25 = '良';
-      $('#jw_pm25,#jw_pm25tip').addClass('yellow');
+      $('#jw_pm25').addClass('yellow');
     } else if (pm25 >= 101 && pm25 <= 150) {
       jw_pm25 = '轻度污染';
-      $('#jw_pm25,#jw_pm25tip').addClass('orange');
+      $('#jw_pm25').addClass('orange');
     } else if (pm25 >= 151 && pm25 <= 200) {
       jw_pm25 = '中度污染';
-      $('#jw_pm25,#jw_pm25tip').addClass('red');
+      $('#jw_pm25').addClass('red');
     } else if (pm25 >= 201 && pm25 <= 300) {
       jw_pm25 = '重度污染';
-      $('#jw_pm25,#jw_pm25tip').addClass('purple');
+      $('#jw_pm25').addClass('purple');
     } else if (pm25 > 300) {
       jw_pm25 = '严重污染';
-      $('#jw_pm25,#jw_pm25tip').addClass('maroon');
+      $('#jw_pm25').addClass('maroon');
     }
     document.querySelector('#jw_pm25').innerHTML = jw_pm25;
   }

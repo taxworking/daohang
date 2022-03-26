@@ -443,7 +443,7 @@ li.whois {
 .jj-list-con li {
     box-sizing: border-box;
     /*以 IE 盒子模型的 width 为标准*/
-    padding: 1px 1px;
+    padding: 1px;
     /*设置 div 的内边距*/
     width: 16.6%;
     /*div 等分成 6 部分*/
@@ -1062,6 +1062,7 @@ ul.search-type li input:focus+label {
 .jweather {
     justify-self: end !important;
     padding-right: 22px !important;
+    color: #333;
 }
 
 .jweather a:hover {
@@ -1096,8 +1097,12 @@ ul.search-type li input:focus+label {
     z-index: 100;
     text-align: right;
     top: 30px;
-    right: 0px;
+    right: 20px;
     font-size: small;
+}
+
+.jw_wtip {
+    right: 48px;
 }
 
 .jw_weather:hover+.jw_tip,
@@ -1107,27 +1112,31 @@ ul.search-type li input:focus+label {
 }
 
 .green {
-    color: green;
+    color: #eee;
+    background-color: green;
 }
 
 .yellow {
-    color: yellow;
+    background-color: yellow;
 }
 
 .orange {
-    color: orange;
+    background-color: orange;
 }
 
 .red {
-    color: red;
+    color: #eee;
+    background-color: red;
 }
 
 .purple {
-    color: purple;
+    color: #eee;
+    background-color: purple;
 }
 
 .maroon {
-    color: maroon;
+    color: #eee;
+    background-color: maroon;
 }
 
 .greeting {
@@ -1271,11 +1280,13 @@ ul.search-type li input:focus+label {
 }
 
 #btn.active:hover #top {
-    transform: translateY(10px) rotate(225deg);
+    transition: transform 200s linear;
+    transform: translateY(10px) rotate(18000deg);
 }
 
 #btn.active:hover #bottom {
-    transform: translateY(-10px) rotate(315deg);
+    transition: transform 200s linear;
+    transform: translateY(-10px) rotate(18000deg);
 }
 
 #box {
@@ -1283,8 +1294,8 @@ ul.search-type li input:focus+label {
     z-index: 4;
     overflow: auto;
     top: 0px;
-    right: -111px;
-    width: 111px;
+    left: -115px;
+    width: 115px;
     opacity: 0;
     padding: 20px 0px;
     height: 100%;
@@ -1315,18 +1326,22 @@ ul.search-type li input:focus+label {
     color: #fff;
 }
 
+#box ul li:hover a {
+    color: #fff !important;
+}
+
 #items .item {
     position: relative;
     cursor: pointer;
     font-size: 1em;
-    padding: 10px 10px 10px 0;
+    padding: 10px 0 10px 10px;
     transition: all 250ms;
-    text-align: center;
+    text-align: left;
 }
 
 #items .item:hover {
     font-weight: bolder;
-    padding: 15px 10px 15px 0;
+    padding: 15px 0 15px 10px;
     background-color: #1890ff;
     color: #fff;
 }
@@ -1343,22 +1358,6 @@ ul.search-type li input:focus+label {
 #items .item:last-child:hover::after {
     color: transparent;
     text-shadow: 0 0 0 orange;
-}
-
-#items .item:hover::after {
-    content: " 👉";
-}
-
-#items .item:last-child:hover::after {
-    content: " 🔝";
-}
-
-#items .item:first-child:hover {
-    padding: 15px 0;
-}
-
-#items .item:first-child:hover::after {
-    content: " 🏠";
 }
 
 #btn,
@@ -1509,6 +1508,13 @@ ul.search-type li input:focus+label {
     .container {
         -ms-grid-columns: 50% 50%;
         grid-template-columns: 50% 50%;
+        align-items: end;
+        line-height: 22px;
+    }
+
+    .jw_weather:hover+.jw_tip,
+    .jw_pm25:hover+.jw_tip {
+        display: none;
     }
 
     .date {
@@ -1611,7 +1617,7 @@ ul.search-type li input:focus+label {
     }
 
     .jweather {
-        padding-right: 0px !important;
+        padding-right: 14px !important;
     }
 
     .highlight {
