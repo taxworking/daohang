@@ -426,7 +426,7 @@ xhr.onreadystatechange = function () {
     var gushici = document.getElementById('gushici');
     var poem_info = document.getElementById('poem_info');
     gushici.innerHTML = '<a href="https://www.google.com/search?q=' + result.data.content + '" target="_blank" rel="noopener noreferrer">' + result.data.content + '</a>';
-    poem_info.innerHTML = '— ' + '<a href="https://www.google.com/search?q=' + result.data.origin.author + ' ' + result.data.origin.title + '" target="_blank" rel="noopener noreferrer">' + '【' + result.data.origin.dynasty + '】' + result.data.origin.author + '《' + result.data.origin.title + '》' + '</a>';
+    poem_info.innerHTML = '- ' + '<a href="https://www.google.com/search?q=' + result.data.origin.author + ' ' + result.data.origin.title + '" target="_blank" rel="noopener noreferrer">' + '【' + result.data.origin.dynasty + '】' + result.data.origin.author + '《' + result.data.origin.title + '》' + '</a>';
   }
 };
 xhr.send();

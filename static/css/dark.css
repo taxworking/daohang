@@ -16,6 +16,7 @@
 [data-theme="dark"] .s-type .s-type-list label,
 [data-theme="dark"] #search-text,
 [data-theme="dark"] ul.search-type li input:checked+label,
+[data-theme="dark"] .greetings,
 [data-theme="dark"] .footer p,
 [data-theme="dark"] .footer a,
 [data-theme="dark"] .footer a:link,
@@ -129,4 +130,3 @@
 [data-theme="dark"] .maroon {
   color: #1c2128 !important;
 }
-

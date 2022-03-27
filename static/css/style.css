@@ -982,14 +982,15 @@ ul.search-type li input:focus+label {
 .container {
     display: grid;
     display: -ms-grid;
-    grid-template-columns: 22% 60% 18%;
-    -ms-grid-columns: 22% 60% 18%;
+    grid-template-columns: 84% 16%;
+    -ms-grid-columns: 84% 16%;
     grid-template-rows: auto;
     -ms-grid-row: auto;
-    grid-column-gap: 10px;
-    grid-row-gap: 10px;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
     justify-items: start;
-    align-items: center
+    align-items: center;
+    line-height: 24px;
 }
 
 .title {
@@ -1003,7 +1004,6 @@ ul.search-type li input:focus+label {
     line-height: 1;
     position: relative;
     justify-self: end;
-    padding-right: 10px;
     text-align: center;
 }
 
@@ -1012,7 +1012,7 @@ ul.search-type li input:focus+label {
 }
 
 .last-about {
-    padding-right: 65px !important;
+    margin-right: 65px !important;
 }
 
 .about a:hover {
@@ -1022,6 +1022,10 @@ ul.search-type li input:focus+label {
 .about span {
     font-size: 16px;
     padding: 0 10px 0 2px;
+}
+
+.poem {
+    margin-left: 10px;
 }
 
 .poem a:hover {
@@ -1061,7 +1065,6 @@ ul.search-type li input:focus+label {
 
 .jweather {
     justify-self: end !important;
-    padding-right: 22px !important;
     color: #333;
 }
 
@@ -1070,7 +1073,7 @@ ul.search-type li input:focus+label {
 }
 
 .jw_weather {
-    font-size: 1.25em;
+    font-size: 24px;
 }
 
 .jw_weather,
@@ -1140,12 +1143,15 @@ ul.search-type li input:focus+label {
 }
 
 .greeting {
-    display: table;
+    display: inline-block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: 99.6%;
 }
 
 .greetings {
-    display: table-cell;
-    vertical-align: middle;
+    color: #333;
 }
 
 .date {
@@ -1374,7 +1380,7 @@ ul.search-type li input:focus+label {
     position: absolute;
     margin: 0;
     top: 50%;
-    right: 9px;
+    right: -5px;
     -webkit-transform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
@@ -1399,8 +1405,8 @@ ul.search-type li input:focus+label {
 }
 
 .dark_label {
-    width: 28px;
-    height: 14px;
+    width: 40px;
+    height: 20px;
     background-color: #333;
     display: flex;
     border-radius: 50px;
@@ -1408,12 +1414,11 @@ ul.search-type li input:focus+label {
     justify-content: space-between;
     padding: 2px;
     position: relative;
-    transform: scale(1.5);
 }
 
 .dark_ball {
-    width: 10px;
-    height: 10px;
+    width: 16px;
+    height: 16px;
     background-color: #f2f2f2;
     position: absolute;
     top: 2px;
@@ -1424,7 +1429,7 @@ ul.search-type li input:focus+label {
 
 /*  target the elemenent after the label*/
 .dark_checkbox:checked+.dark_label .dark_ball {
-    transform: translateX(14px);
+    transform: translateX(20px);
 }
 
 .fa-moon {
@@ -1435,17 +1440,67 @@ ul.search-type li input:focus+label {
     color: gold;
 }
 
-.fa-moon {
-    padding-bottom: 1px;
-}
-
-.fa-sun {
-    padding-bottom: 2px;
-}
-
 /*-----------------------------简洁版样式定义- 结束---------------------------------------------------*/
 /*-----------------------------手机自适应---------------------------------------------------*/
-@media screen and (max-device-width: 1259px) {
+@media screen and (max-device-width: 1599px) {
+    .date {
+        display: none;
+    }
+    .container {
+        grid-template-columns: 84% 16%;
+        -ms-grid-columns: 84% 16%;
+    }
+}
+@media screen and (max-device-width: 1439px) {
+    .jj-list-con li {
+        width: 20%;
+        /*div 等分成 5 部分*/
+    }
+}
+
+@media screen and (max-device-width: 1359px) {
+    .jj-list-con li {
+        width: 25%;
+        /*div 等分成 4 部分*/
+    }
+}
+
+@media screen and (max-device-width: 1279px) {
+
+    .date,
+    .poem_info {
+        display: none;
+    }
+    #search-list,
+    .s-type-list {
+        display: none;
+    }
+    #search button {
+        top: 28px;
+    }
+    .container {
+        grid-template-columns: 80% 20%;
+        -ms-grid-columns: 80% 20%;
+    }
+}
+
+@media screen and (max-device-width: 1023px) {
+    .poem_info {
+        display: none;
+    }
+}
+
+@media screen and (max-device-width: 809px) {
+    .poem {
+        display: none;
+    }
+    .container {
+        grid-template-columns: 50% 50%;
+        -ms-grid-columns: 50% 50%;
+    }
+}
+
+@media screen and (max-device-width: 799px) {
     .inner-center {
         width: 85%;
     }
@@ -1512,6 +1567,10 @@ ul.search-type li input:focus+label {
         line-height: 22px;
     }
 
+    .jweather {
+        padding-right: 8px;
+    }
+
     .jw_weather:hover+.jw_tip,
     .jw_pm25:hover+.jw_tip {
         display: none;
@@ -1551,10 +1610,6 @@ ul.search-type li input:focus+label {
         width: 85%;
     }
 
-    #banner {
-        width: 85%;
-    }
-
     #home_search {
         width: 85%;
     }
@@ -1583,8 +1638,8 @@ ul.search-type li input:focus+label {
         margin: -20px -10px 20px -10px
     }
 
-    .banner {
-        padding-bottom: 10px;
+    #banner {
+        width: 85%;
     }
 
     .footer {
@@ -1609,22 +1664,14 @@ ul.search-type li input:focus+label {
     }
 
     .header-grid {
-        width: 100%;
+        width: 85%;
         margin: 0 auto;
         grid-template-columns: 85% 15%;
         -ms-grid-columns: 85% 15%;
         justify-items: center;
     }
 
-    .jweather {
-        padding-right: 14px !important;
-    }
-
     .highlight {
         padding-left: 0 !important;
-    }
-
-    .darkmode {
-        padding: 4px 15px 0 0;
     }
 }
