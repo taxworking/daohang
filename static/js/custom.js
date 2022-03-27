@@ -340,7 +340,7 @@ $(document).bind('DOMNodeInserted', function (event) {
   };
   var callback_error = function (element) {
     logElementEvent("💀 ERROR", element);
-    element.src = "https://via.placeholder.com/440x560/?text=Error+Placeholder";
+    element.src = "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://example.com/&size=18";
   };
   var callback_finish = function () {
     logElementEvent("✔️ FINISHED", document.documentElement);
