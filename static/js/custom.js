@@ -743,10 +743,10 @@ $(document).ready(function () {
       var re = /\bhttps?:\/\/(?!\S+(?:jpe?g|png|bmp|gif|webp|jfif|gif))\S+/g;
       var re_forpic = /\bhttps?:[^:<>"]*\/([^:<>"]*)(\.(jpe?g)|(png)|(bmp)|(jfif)|(webp))/g;
       str = str.replace(re, function (website) {
-        return '🔗';
+        return '<span class=emoji>🔗</span>';
       });
       str = str.replace(re_forpic, function (imgurl) {
-        return '<span class=emoji>🖼︎</span>';
+        return '<span class=emoji>🎴</span>';
       });
       return str;
     }
