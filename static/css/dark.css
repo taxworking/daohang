@@ -120,3 +120,13 @@
 [data-theme="dark"] .dark_label {
   background-color: #adbac7 !important;
 }
+
+[data-theme="dark"] .green,
+[data-theme="dark"] .yellow,
+[data-theme="dark"] .orange,
+[data-theme="dark"] .red,
+[data-theme="dark"] .purple,
+[data-theme="dark"] .maroon {
+  color: #1c2128 !important;
+}
+
