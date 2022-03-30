@@ -22,7 +22,8 @@
  - 搜索框重构
  - jQuery：<https://jquery.com/>
  - Google fonts：<https://fonts.google.com/>
- - Google favicon API：<https://www.google.cn/s2/favicons?domain_url=https://s.eallion.com/>
+ - Google favicon API：<https://www.google.cn/s2/favicons?domain_url=https://s.eallion.com>
+ - Self-hosted favicon api (Vercel)：<https://favicon.api.eallion.com/?sz=32&url=https://s.eallion.com>
  - 今日诗词：<https://www.jinrishici.com/>
  - Umami 统计：<https://github.com/mikecao/umami.git>
  - Baomitu CDN：<https://cdn.baomitu.com/>
@@ -39,6 +40,12 @@
  - 嘀咕 Talk：<https://eallion.com/talk/>
  - 腾讯公益 404：<https://news.qq.com/404/>
 
+### Inspiration
+- <https://github.com/TopVitamin/static-nav>
+- <https://github.com/soulteary/docker-flare>
+- <https://edui123.com/>
+- <https://nav.wsoso.com/>
+- <https://www.milkdh.com/>
 
 ### LICENSE
 ```
