@@ -45,7 +45,6 @@
 }
 
 [data-theme="dark"] .header,
-[data-theme="dark"] #btn,
 [data-theme="dark"] #box,
 [data-theme="dark"] .footer,
 [data-theme="dark"] .dark_ball {
@@ -75,9 +74,17 @@
   color: #539bf5 !important;
 }
 
+[data-theme="dark"] .jj-list-con li {
+  border: 1px #1c2128 solid !important;
+}
+
+[data-theme="dark"] .jj-list-con li:hover {
+  background: #2d333b !important;
+}
+
 [data-theme="dark"] .item-box,
 [data-theme="dark"] .search-group ul.search-type li label,
-[data-theme="dark"] .jj-list-con li a {
+[data-theme="dark"] .jj-list-con li {
   background: #22272e !important;
 }
 
@@ -105,6 +112,10 @@
 
 [data-theme="dark"] .back-to-top svg {
   fill: #1c2128 !important;
+}
+
+[data-theme="dark"] .jj-list-tit {
+  color: #adbac7 !important;
 }
 
 [data-theme="dark"] label.toggle-item {

@@ -451,36 +451,42 @@ li.whois {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    background: #f2f2f2;
+    border: 1px white solid;
 }
 
 .jj-list-con li a {
-    display: block;
-    /*background: rgba(230, 247, 255, 0.96);*/
-    background: #f2f2f2;
+    display: inline-block;
     color: rgba(49, 70, 89, 1);
-    font-size: 13px;
+    font-size: 14px;
     text-align: left;
-    padding-left: 1.7em;
+    padding-left: 1.5em;
     line-height: 44px;
     transition: all 0.2s;
     border-radius: 2px;
 }
 
 .jj-list-con li a img {
-    height: 13px;
+    height: 16px;
     margin-right: 8px;
+    vertical-align: middle;
 }
 
-.jj-list-con li a:hover {
+.jj-list-con li:hover {
     background: #1890FF 100%;
-    font-size: 18px;
+    font-size: 22px;
     font-weight: bold;
     color: #fff;
 }
 
-.jj-list-con li a:hover img {
-    height: 18px;
+.jj-list-con li:hover img {
+    height: 22px;
     margin-right: 8px;
+}
+
+.jj-list-con li:hover a {
+    font-size: 18px;
+    font-weight: bold;
 }
 
 /* 搜索样式 search */
@@ -1511,7 +1517,7 @@ ul.search-type li input:focus+label {
     }
 
     .jj-list-con li a {
-        padding: 0 0.7em;
+        padding: 0 0.5em;
         width: 100%;
         overflow: hidden;
         text-overflow: ellipsis;
