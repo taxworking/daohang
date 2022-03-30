@@ -142,3 +142,8 @@
 [data-theme="dark"] .maroon {
   color: #1c2128 !important;
 }
+
+[data-theme="dark"] .github-corner svg {
+  fill: #adbac7 !important;
+  color: #2d333b !important;
+}
