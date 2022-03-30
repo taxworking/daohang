@@ -468,7 +468,7 @@ li.whois {
 
 .jj-list-con li a img {
     height: 16px;
-    margin-right: 8px;
+    margin: 0 8px 2px 0;
     vertical-align: middle;
 }
 
@@ -481,12 +481,13 @@ li.whois {
 
 .jj-list-con li:hover img {
     height: 22px;
-    margin-right: 8px;
+    margin: 0 8px 4px 0;
 }
 
 .jj-list-con li:hover a {
     font-size: 18px;
     font-weight: bold;
+    color: #fff;
 }
 
 /* 搜索样式 search */

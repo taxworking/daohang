@@ -69,6 +69,7 @@
 
 [data-theme="dark"] a:hover,
 [data-theme="dark"] .jj-list-con li a:hover,
+[data-theme="dark"] .jj-list-con li:hover a,
 [data-theme="dark"] .search-group ul.search-type li label:hover,
 [data-theme="dark"] .search-group ul.search-type li label:hover {
   color: #539bf5 !important;
