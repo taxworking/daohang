@@ -514,6 +514,7 @@ li.whois {
     line-height: 44px;
     transition: all 0.2s;
     border-radius: 2px;
+    width: 100%;
 }
 
 .jj-list-con li a img {
