@@ -1,13 +1,11 @@
-/*!
+/*
  * Dark Mode Switch v1.0.1 (https://github.com/coliff/dark-mode-switch)
  * Copyright 2021 C.Oliff
  * Licensed under MIT (https://github.com/coliff/dark-mode-switch/blob/main/LICENSE)
- */
+*/
 
 [data-theme="dark"],
 [data-theme="dark"] a,
-[data-theme="dark"] #btn,
-[data-theme="dark"] #box,
 [data-theme="dark"] .slick-track,
 [data-theme="dark"] .metaColor a,
 [data-theme="dark"] .metaColor,
@@ -30,22 +28,19 @@
   color: #adbac7 !important;
 }
 
- 
-
-[data-theme="dark"] #btn div {
-  background-color: #adbac7 !important;
+[data-theme="dark"] .items li a {
+  color: #adbac7 !important;
+  background: #22272e !important;
+  box-shadow: 0 0 8px #373e47 !important;
 }
 
-[data-theme="dark"]  #btn:hover div::after {
-  background-color: transparent !important;
-}
-
-[data-theme="dark"] #btn.active div {
-  background-color: #539bf5 !important;
+[data-theme="dark"] .items li a:hover,
+[data-theme="dark"] .items li a.active {
+    color: #f2f2f2;
+    background: #1890ff;
 }
 
 [data-theme="dark"] .header,
-[data-theme="dark"] #box,
 [data-theme="dark"] .footer,
 [data-theme="dark"] .dark_ball {
   background-color: #2d333b !important;

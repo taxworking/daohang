@@ -854,6 +854,7 @@ $('.to-top').toTop({
   bottom: 15
 });
 
+/*
 // toggle menu
 const sidebarBox = document.querySelector('#box'),
   sidebarBtn = document.querySelector('#btn'),
@@ -906,6 +907,7 @@ window.addEventListener('keydown', event => {
     sidebarBox.classList.remove('active');
   }
 });
+*/
 
 // anchor smooth scroll
 $(".scrollTo").on('click', function (e) {
