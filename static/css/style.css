@@ -162,6 +162,7 @@ textarea {
 .items span {
     margin-left: 6px;
 }
+
 .main {
     padding-top: 60px;
 }
@@ -416,16 +417,6 @@ li.whois {
     padding-left: 5px;
 }
 
-/* .input-wrap .search-input:focus{
-    border-style:solid;
-    border-color: #FDA31E 96%;
-    box-shadow: 0 0 10px #FDA31E;
-    } */
-/* .search-left:focus{
-    border-style:solid;
-    border-color: #FDA31E 96%;
-    box-shadow: 0 0 10px #FDA31E;
-    } */
 .input-wrap .clear-keyword {
     display: none;
     position: absolute;
@@ -823,6 +814,19 @@ li.whois {
     cursor: pointer;
 }
 
+.s-type .type-text:before {
+    position: absolute;
+    top: 12px;
+    right: 10px;
+    content: '▼';
+    display: inline-block;
+    transform: scale(0.75);
+}
+
+.s-type .type-text:hover:before {
+    content: '▲';
+}
+
 .s-type .s-type-list {
     opacity: 0;
     visibility: hidden;
@@ -860,6 +864,7 @@ li.whois {
     height: 44px;
     padding: 12px;
     padding-left: 20px;
+    border: 1px solid #f2f2f2;
 }
 
 .metaColor a,
@@ -910,28 +915,19 @@ span.type-text,
     border-top-color: #778B9E;
 }
 
-.s-type .type-text:before {
-    position: absolute;
-    top: 12px;
-    right: 25px;
-    content: '▼';
-    display: block;
-    width: 0;
-    height: 0;
-    font-size: .5em;
-}
-
 #search input,
 #search select,
 #search textarea {
-    background-color: #F4F9FF;
+    background-color: #fff;
     border-radius: 20px;
 }
 
-#search input:focus,
-#search select:focus,
-#search textarea:focus {
-    box-shadow: inset 0px 0px 2px #1890ff;
+#search input:hover,
+#search select:hover,
+#search textarea:hover {
+    background-color: #fff;
+    box-shadow: 0 1px 6px rgba(32, 33, 36, .28);
+    border-color: rgba(223, 225, 229, 0);
 }
 
 .search-group ul.search-type li label {
@@ -951,12 +947,7 @@ span.type-text,
 #search-text,
 ul.search-type li input:checked+label {
     color: #333;
-    background-color: #F4F9FF;
-}
-
-ul.search-type li input:focus+label {
-    color: #fff;
-    background-color: #1890FF;
+    background-color: #f2f2f2;
 }
 
 .mainBg {
@@ -1395,6 +1386,7 @@ ul.search-type li input:focus+label {
         display: none;
     }
 }
+
 @media screen and (max-device-width: 1599px) {
     .date {
         display: none;
