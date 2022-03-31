@@ -1714,4 +1714,8 @@ ul.search-type li input:focus+label {
     .highlight {
         padding-left: 0 !important;
     }
+
+    .github-corner {
+        display: none;
+    }
 }
