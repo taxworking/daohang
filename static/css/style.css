@@ -482,6 +482,7 @@ li.whois {
 .jj-list-con li:hover img {
     height: 22px;
     margin: 0 8px 4px 0;
+    background-color: #fff;
 }
 
 .jj-list-con li:hover a {
