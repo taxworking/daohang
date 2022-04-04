@@ -163,6 +163,11 @@ textarea {
     margin-left: 6px;
 }
 
+.items svg {
+    transform: scale(1.2);
+    margin-left: 8px;
+}
+
 .main {
     padding-top: 60px;
 }
@@ -764,7 +769,7 @@ li.whois {
 
 #search button {
     position: absolute;
-    top: 68px;
+    top: 67px;
     right: 32px;
     background: transparent;
     border: 0 !important;
@@ -1221,6 +1226,9 @@ ul.search-type li input:checked+label {
 }
 
 /* 首页嘀咕样式 JSON 版 */
+#index-talk {
+    padding-left: 8px;
+}
 .index-talk {
     display: flex;
     flex: 1 auto;

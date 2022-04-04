@@ -24,9 +24,10 @@
  - Google fonts：<https://fonts.google.com/>
  - Google favicon API：<https://www.google.cn/s2/favicons?domain_url=https://s.eallion.com>
  - Self-hosted favicon api (Vercel)：<https://favicon.api.eallion.com/?sz=32&url=https://s.eallion.com>
+ - Iconify：<https://iconify.design/>
  - 今日诗词：<https://www.jinrishici.com/>
  - Umami 统计：<https://github.com/mikecao/umami.git>
- - Baomitu CDN：<https://cdn.baomitu.com/>
+ - Staticfile CDN：<http://staticfile.org/>
  - 和风天气：<https://www.qweather.com/>
  - Vanilla lazyload：<https://github.com/verlok/vanilla-lazyload>
  - PWA：<https://web.dev/progressive-web-apps/>
