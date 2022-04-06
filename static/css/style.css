@@ -524,25 +524,17 @@ li.whois {
 
 .jj-list-con li a img {
     height: 16px;
+    width: 16px;
     margin: 0 8px 2px 0;
     vertical-align: middle;
 }
 
 .jj-list-con li:hover {
     background: #1890FF 100%;
-    font-size: 22px;
-    font-weight: bold;
     color: #fff;
 }
 
-.jj-list-con li:hover img {
-    height: 22px;
-    margin: 0 8px 4px 0;
-}
-
 .jj-list-con li:hover a {
-    font-size: 18px;
-    font-weight: bold;
     color: #fff;
 }
 
