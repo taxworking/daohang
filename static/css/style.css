@@ -1437,7 +1437,7 @@ ul.search-type li input:checked+label {
     }
 
     #search button {
-        top: 28px;
+        top: 26px;
     }
 
     .container {
@@ -1479,6 +1479,11 @@ ul.search-type li input:checked+label {
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
+        vertical-align: middle;
+    }
+
+    .jj-list-con li a img {
+        margin: 0 8px 2px;
     }
 
     .search-left {
@@ -1584,7 +1589,7 @@ ul.search-type li input:checked+label {
 
     #search button,
     #search button:hover {
-        top: 20px;
+        top: 18px;
         right: 10px;
     }
 
