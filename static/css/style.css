@@ -1099,7 +1099,7 @@ ul.search-type li input:checked+label {
 }
 
 .poem_sentence a {
-    font: normal 1.125em / 150% STSong, SimSun, NSimSun, Arial, sans-serif;
+    font: normal 1em / 100% STSong, SimSun, NSimSun, Arial, sans-serif;
     -webkit-text-size-adjust: 100%;
     text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
