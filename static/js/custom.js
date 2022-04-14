@@ -426,7 +426,7 @@ xhr.onreadystatechange = function () {
     var gushici = document.getElementById('gushici');
     var poem_info = document.getElementById('poem_info');
     gushici.innerHTML = '<a href="https://www.google.com/search?q=' + result.data.content + '" target="_blank" rel="noopener noreferrer">' + result.data.content + '</a>';
-    poem_info.innerHTML = '- ' + '<a href="https://www.google.com/search?q=' + result.data.origin.author + ' ' + result.data.origin.title + '" target="_blank" rel="noopener noreferrer">' + '【' + result.data.origin.dynasty + '】' + result.data.origin.author + '《' + result.data.origin.title + '》' + '</a>';
+    poem_info.innerHTML = '<a href="https://www.google.com/search?q=' + result.data.origin.author + ' ' + result.data.origin.title + '" target="_blank" rel="noopener noreferrer">' + '【' + result.data.origin.dynasty + '】' + result.data.origin.author + '《' + result.data.origin.title + '》' + '</a>';
   }
 };
 xhr.send();
@@ -565,84 +565,6 @@ if (jQuery(".comment_stars a").click((function () {
     setTimeout((function () {
       jQuery(".search_form #s").focus()
     }), 500)
-  })), jQuery((function (t) {
-    if (t(window).width() > 481 && (t(".single-book").length > 0 && t(".article-info img").height(t(".info-list").outerHeight()), t(".single-bookmark").length > 0 || t(".single-tool").length > 0 || t(".single-figure").length > 0)) {
-      var e = t(".article-info .icon-thumb");
-      e.width(e.outerHeight())
-    }
-
-    function a() {
-      var e = 10,
-        a = 20;
-      t(document).on("mousemove", ".tip, .links a", (function (n) {
-        var i = t("#titleTip");
-        i.length || (this.myTitle = this.title, this.title = "", i = t("<div id='titleTip'>" + this.myTitle + "</div>"), t("body").append(i)), i.css({
-          top: n.pageY + a + "px",
-          left: n.pageX + e + "px"
-        }).show("fast")
-      })).on("mouseout", ".tip, .links a", (function () {
-        this.title = this.myTitle, t("#titleTip").remove()
-      }))
-    }
-    t(window).scroll((function () {
-      t(window).scrollTop() > 200 ? t("#back_to_top").addClass("active") : t("#back_to_top").removeClass("active")
-    })), t("#back_to_top").click((function () {
-      return t("body,html").animate({
-        scrollTop: 0
-      }, 800), !1
-    })), t(".close-nav,.container>.overlay").click((function () {
-      t("body").hasClass("salong-close-nav") ? (t("body").removeClass("salong-close-nav"), t(window).width() > 1280 && t.cookie("close-nav", "no", {
-        expires: 365,
-        path: "/"
-      })) : (t("body").addClass("salong-close-nav"), t(window).width() > 1280 && t.cookie("close-nav", "yes", {
-        expires: 365,
-        path: "/"
-      }))
-    })), t(".setting-button div.button").on("click", (function () {
-      var e = t(this).data("id"),
-        a = "salong-setting-" + e;
-      if (t(".type-main").each((function (a, n) {
-          var i;
-          "meta" == e && t(n).find(".post-meta").animate({
-            height: "toggle"
-          }, 500);
-          if ("direct" == e) {
-            var o = t(n).find("a.title"),
-              r = o.attr("href"),
-              s = o.attr("data-external");
-            o.attr("href", s), o.attr("data-external", r);
-            var l = o.attr("title"),
-              c = o.attr("data-title");
-            o.attr("title", c), o.attr("data-title", l)
-          }
-        })), t("body").hasClass(a)) t("body").removeClass(a), t.cookie(a, "yes", {
-        expires: 365,
-        path: "/"
-      }), "language" == e && t(".type-main").each((function (e, a) {
-        var n = t(a).data("language");
-        n && t(a).find(".title-icon").append('<span class="language tip langBG" title="' + n + '"><span>' + n + "</span></span>")
-      })), "hot" == e && t(".type-main").each((function (e, a) {
-        var n = t(a).data("hot");
-        n && t(a).find(".title-icon").append('<span class="hot tip hotBG" title="' + n + '"><span>H</span></span>')
-      }));
-      else {
-        if (t("body").addClass(a), t.cookie(a, "no", {
-            expires: 365,
-            path: "/"
-          }), "language" == e) {
-          var n = t(".type-main").find(".language");
-          n.fadeOut(500), setTimeout((function () {
-            n.remove()
-          }), 500)
-        }
-        if ("hot" == e) {
-          var i = t(".type-main").find(".hot");
-          i.fadeOut(500), setTimeout((function () {
-            i.remove()
-          }), 500)
-        }
-      }
-    })), t(window).width() > 1280 && a()
   })), jQuery("#super-search-fm").length > 0 && eval(function (t, e, a, n, i, o) {
     if (i = function (t) {
         return (t < e ? "" : i(parseInt(t / e))) + ((t %= e) > 35 ? String.fromCharCode(t + 29) : t.toString(36))
@@ -658,13 +580,11 @@ if (jQuery(".comment_stars a").click((function () {
     return t
   }('!2(){2 g(){h(),i(),j(),k()}2 h(){d.9=s()}2 i(){z a=4.8(\'A[B="7"][5="\'+p()+\'"]\');a&&(a.9=!0,l(a))}2 j(){v(u())}2 k(){w(t())}2 l(a){P(z b=0;b<e.O;b++)e[b].I.1c("s-M");a.F.F.F.I.V("s-M")}2 m(a,b){E.H.S("L"+a,b)}2 n(a){6 E.H.Y("L"+a)}2 o(a){f=a.3,v(u()),w(a.3.5),m("7",a.3.5),c.K(),l(a.3)}2 p(){z b=n("7");6 b||a[0].5}2 q(a){m("J",a.3.9?1:-1),x(a.3.9)}2 r(a){6 a.11(),""==c.5?(c.K(),!1):(w(t()+c.5),x(s()),s()?E.U(b.G,+T X):13.Z=b.G,10 0)}2 s(){z a=n("J");6 a?1==a:!0}2 t(){6 4.8(\'A[B="7"]:9\').5}2 u(){6 4.8(\'A[B="7"]:9\').W("14-N")}2 v(a){c.1e("N",a)}2 w(a){b.G=a}2 x(a){a?b.3="1a":b.16("3")}z y,a=4.R(\'A[B="7"]\'),b=4.8("#18-C-19"),c=4.8("#C-12"),d=4.8("#17-C-15"),e=4.R(".C-1b"),f=a[0];P(g(),y=0;y<a.O;y++)a[y].D("Q",o);d.D("Q",q),b.D("1d",r)}();', 62, 77, "||function|target|document|value|return|type|querySelector|checked||||||||||||||||||||||||||var|input|name|search|addEventListener|window|parentNode|action|localStorage|classList|newWindow|focus|superSearch|current|placeholder|length|for|change|querySelectorAll|setItem|new|open|add|getAttribute|Date|getItem|href|void|preventDefault|text|location|data|blank|removeAttribute|set|super|fm|_blank|group|remove|submit|setAttribute".split("|"), 0, {})), jQuery(window).width() < 1280) {
   var mainNav = jQuery(".main-nav"),
-    leftNav = jQuery(".container");
-  mainNav.length > 0 && mainNav.addClass("navBg"), leftNav.length > 0 && jQuery(".container").append('<div class="overlay transition navBg"></div>')
+    leftNav = jQuery(".containers");
+  mainNav.length > 0 && mainNav.addClass(""), leftNav.length > 0 && jQuery(".containers").append('')
 }
 
 // Lately.js - Native JavaScript, only 800Byte but simple and easy to use Timeago plugin
-
-;
 (function (global, undefined) {
   "use strict"
   let _global;
@@ -924,56 +844,92 @@ document.querySelector('form').onsubmit = e => {
   return false;
 };
 
-/*!
- * Dark Mode Switch v1.0.1 (https://github.com/coliff/dark-mode-switch)
- * Copyright 2021 C.Oliff
- * Licensed under MIT (https://github.com/coliff/dark-mode-switch/blob/main/LICENSE)
- */
-
-var darkSwitch = document.getElementById("darkSwitch");
-window.addEventListener("load", function () {
-  if (darkSwitch) {
-    initTheme();
-    darkSwitch.addEventListener("change", function () {
-      resetTheme();
-    });
-  }
-});
-
-/**
- * Summary: function that adds or removes the attribute 'data-theme' depending if
- * the switch is 'on' or 'off'.
- *
- * Description: initTheme is a function that uses localStorage from JavaScript DOM,
- * to store the value of the HTML switch. If the switch was already switched to
- * 'on' it will set an HTML attribute to the body named: 'data-theme' to a 'dark'
- * value. If it is the first time opening the page, or if the switch was off the
- * 'data-theme' attribute will not be set.
- * @return {void}
- */
-function initTheme() {
-  var darkThemeSelected =
-    localStorage.getItem("darkSwitch") !== null &&
-    localStorage.getItem("darkSwitch") === "dark";
-  darkSwitch.checked = darkThemeSelected;
-  darkThemeSelected
-    ?
-    document.body.setAttribute("data-theme", "dark") :
-    document.body.removeAttribute("data-theme");
+// dark mode
+let storageColorScheme = localStorage.getItem("lightDarkMode")
+if ((storageColorScheme == 'Auto' && window.matchMedia("(prefers-color-scheme: dark)").matches) || storageColorScheme == "Dark") {
+  document.body.classList.add('dark')
+} else if ((storageColorScheme == 'Auto' && window.matchMedia("(prefers-color-scheme: light)").matches) || storageColorScheme == "Light") {
+  document.body.classList.remove('dark')
+} else if (((storageColorScheme == 'Auto' || storageColorScheme == null) && window.matchMedia("(prefers-color-scheme: dark)").matches) || storageColorScheme == "Dark") {
+  document.body.classList.add('dark')
 }
 
-/**
- * Summary: resetTheme checks if the switch is 'on' or 'off' and if it is toggled
- * on it will set the HTML attribute 'data-theme' to dark so the dark-theme CSS is
- * applied.
- * @return {void}
- */
-function resetTheme() {
-  if (darkSwitch.checked) {
-    document.body.setAttribute("data-theme", "dark");
-    localStorage.setItem("darkSwitch", "dark");
+// change icon and add listener if auto
+let element = document.getElementById('lightDarkMode')
+if (storageColorScheme == null || storageColorScheme == 'Auto') {
+  document.addEventListener('DOMContentLoaded', () => {
+    window.matchMedia("(prefers-color-scheme: dark)").addEventListener('change', switchDarkMode)
+  })
+} else if (storageColorScheme == "Light") {
+  element.firstElementChild.setAttribute("data-icon", 'akar-icons:sun-fill')
+} else if (storageColorScheme == "Dark") {
+  element.firstElementChild.setAttribute("data-icon", 'akar-icons:moon-fill')
+}
+document.addEventListener('DOMContentLoaded', () => {
+  getcolorscheme();
+});
+
+function getcolorscheme() {
+  let storageColorScheme = localStorage.getItem("lightDarkMode")
+  let element = document.getElementById('lightDarkMode');
+  let targetDiv = document.getElementById('lightDarkOptions');
+  let targets = targetDiv.getElementsByTagName('span');
+  let screen = document.getElementById('is-open');
+
+  element.addEventListener('click', () => {
+    targetDiv.classList.toggle('hidden')
+    screen.classList.toggle('hidden')
+  })
+
+  for (let target of targets) {
+    target.addEventListener('click', () => {
+      let targetName = target.getAttribute("name")
+      let icon = switchMode(targetName)
+      let old_icon = element.firstElementChild.getAttribute("data-icon")
+      element.firstElementChild.setAttribute("data-icon", icon)
+
+      localStorage.setItem("lightDarkMode", targetName)
+
+      targetDiv.classList.toggle('hidden')
+      screen.classList.toggle('hidden')
+
+      let event = new Event('themeChanged');
+      document.dispatchEvent(event);
+    })
+  }
+  screen.addEventListener('click', () => {
+    targetDiv.classList.toggle('hidden')
+    screen.classList.toggle('hidden')
+  })
+}
+
+function switchMode(mode) {
+  let icon = ''
+  switch (mode) {
+    case 'Light':
+      window.matchMedia("(prefers-color-scheme: dark)").removeEventListener('change', switchDarkMode)
+      icon = 'akar-icons:sun-fill'
+      document.body.classList.remove('dark')
+      break
+    case 'Dark':
+      window.matchMedia("(prefers-color-scheme: dark)").removeEventListener('change', switchDarkMode)
+      icon = 'akar-icons:moon-fill'
+      document.body.classList.add('dark')
+      break
+    case 'Auto':
+      icon = 'bxs:adjust'
+      const isDarkMode = window.matchMedia("(prefers-color-scheme: dark)")
+      switchDarkMode(isDarkMode)
+      window.matchMedia("(prefers-color-scheme: dark)").addEventListener('change', switchDarkMode)
+      break
+  }
+  return icon
+}
+
+function switchDarkMode(e) {
+  if (e.matches) {
+    document.body.classList.add('dark')
   } else {
-    document.body.removeAttribute("data-theme");
-    localStorage.removeItem("darkSwitch");
+    document.body.classList.remove('dark')
   }
 }

@@ -51,6 +51,10 @@ html {
     scroll-behavior: smooth;
 }
 
+.hidden {
+    display: none !important;
+}
+
 .emoji {
     font-family: apple color emoji, segoe ui emoji, segoe ui symbol, noto color emoji, sans-serif, serif;
 }
@@ -85,22 +89,11 @@ textarea {
 }
 
 .header {
-    padding: 20px 0;
-    background-color: #f2f2f2;
-    line-height: 28px;
-}
-
-.header-grid {
     width: 75%;
     margin: 0 auto;
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 50% 50%;
-    grid-template-columns: 50% 50%;
-    grid-column-gap: 10px;
-    grid-row-gap: 10px;
-    justify-items: start;
-    align-items: center;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: space-between;
 }
 
 .items {
@@ -1021,7 +1014,10 @@ ul.search-type li input:checked+label {
 }
 
 #header {
-    width: 100%;
+    width: 99.6%;
+    padding: 20px 0;
+    background-color: #f2f2f2;
+    line-height: 28px;
 }
 
 .jinrishici-desc {
@@ -1030,26 +1026,13 @@ ul.search-type li input:checked+label {
     font-size: 1.3em;
 }
 
-.grid {
-    display: grid;
-    display: -ms-grid;
-    grid-template-columns: repeat(2, 1fr);
-    -ms-grid-columns: repeat(2, 1fr);
-    grid-gap: 10px;
-}
-
 .container {
-    display: grid;
-    display: -ms-grid;
-    grid-template-columns: 84% 16%;
-    -ms-grid-columns: 84% 16%;
-    grid-template-rows: auto;
-    -ms-grid-row: auto;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    justify-items: start;
+    display: -ms-flex;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    line-height: 24px;
+    line-height: 1.2em;
 }
 
 .title {
@@ -1062,7 +1045,6 @@ ul.search-type li input:checked+label {
     align-self: center;
     line-height: 1;
     position: relative;
-    justify-self: end;
     text-align: center;
 }
 
@@ -1084,7 +1066,7 @@ ul.search-type li input:checked+label {
 }
 
 .poem {
-    margin-left: 10px;
+    margin: 0 auto;
 }
 
 .poem a:hover {
@@ -1093,24 +1075,26 @@ ul.search-type li input:checked+label {
 
 .poem_sentence,
 .poem_info {
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-}
-
-.poem_sentence a {
-    font: normal 1em / 100% STSong, SimSun, NSimSun, Arial, sans-serif;
     -webkit-text-size-adjust: 100%;
     text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
+    white-space: nowrap;
+    display: block;
+    text-align: center;
 }
 
-.poem_info {
-    font-size: small;
-    font-weight: 300;
-    height: 100%;
-    max-width: 50%;
-    min-width: 20%;
+.poem_sentence a,
+.poem_info a {
+    font-family: STSong, SimSun, NSimSun, Arial, sans-serif;
+    line-height: 1.5em;
+}
+
+.poem_sentence a {
+    font-size: 1.2em;
+}
+
+.poem_info a {
+    font-size: smaller;
 }
 
 .shici,
@@ -1123,7 +1107,6 @@ ul.search-type li input:checked+label {
 }
 
 .jweather {
-    justify-self: end !important;
     color: #333;
 }
 
@@ -1221,6 +1204,7 @@ ul.search-type li input:checked+label {
 #index-talk {
     padding-left: 8px;
 }
+
 .index-talk {
     display: flex;
     flex: 1 auto;
@@ -1286,69 +1270,70 @@ ul.search-type li input:checked+label {
     margin: 10px 0 0 12px;
 }
 
-.darkmode {
-    padding: 0;
-    position: absolute;
-    margin: 0;
-    top: 50%;
-    right: -5px;
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-}
-
-.dark_checkbox {
-    padding: 0;
-    position: absolute;
-}
-
-.dark_checkbox input[type=checkbox] {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    -webkit-tap-highlight-color: transparent;
-    cursor: pointer;
-}
-
-.dark_checkbox input[type=checkbox]:focus {
-    outline: 0;
-}
-
-.dark_label {
-    width: 40px;
-    height: 20px;
-    background-color: #333;
-    display: flex;
-    border-radius: 50px;
-    align-items: center;
-    justify-content: space-between;
-    padding: 2px;
+.lightDarkMode {
+    padding-top: 0;
     position: relative;
 }
 
-.dark_ball {
-    width: 16px;
-    height: 16px;
-    background-color: #f2f2f2;
+.lightDarkModes {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    justify-content: center;
+}
+
+.lightDarkModes:hover {
+    color: #1890FF;
+}
+
+.is-open {
+    opacity: 0;
+    cursor: default;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    position: fixed;
+    z-index: 1000;
+}
+
+.lightDarkOptions {
     position: absolute;
-    top: 2px;
-    left: 2px;
-    border-radius: 50%;
-    transition: transform 0.2s linear;
+    left: auto;
+    right: 0;
+    top: 1.5em;
+    padding: 0.5rem 0;
+    background-color: #f2f2f2;
+    border-color: #f2f2f2;
+    border-width: 1px;
+    border-radius: 0.25rem;
+    border: thin solid #f2f2f2;
+    flex-direction: column;
+    cursor: pointer;
+    width: 8rem;
+    display: flex;
+    z-index: 1001;
+    font-size: 0.9em;
 }
 
-/*  target the elemenent after the label*/
-.dark_checkbox:checked+.dark_label .dark_ball {
-    transform: translateX(20px);
+.lightDarkOption {
+    padding: 0.25rem !important;
 }
 
-.fa-moon {
-    color: midnightblue;
+.lightDarkOption:hover {
+    background-color: #1890FF;
+    color: #fff;
 }
 
-.fa-sun {
-    color: gold;
+.lightDarkMode svg {
+    fill: currentColor;
+    transform: scale(1.2);
+}
+
+.lightDarkOption svg {
+    transform: scale(1) !important;
 }
 
 .github-corner:hover .octo-arm {
@@ -1395,11 +1380,6 @@ ul.search-type li input:checked+label {
     .date {
         display: none;
     }
-
-    .container {
-        grid-template-columns: 84% 16%;
-        -ms-grid-columns: 84% 16%;
-    }
 }
 
 @media screen and (max-device-width: 1439px) {
@@ -1431,11 +1411,6 @@ ul.search-type li input:checked+label {
     #search button {
         top: 26px;
     }
-
-    .container {
-        grid-template-columns: 80% 20%;
-        -ms-grid-columns: 80% 20%;
-    }
 }
 
 @media screen and (max-device-width: 1023px) {
@@ -1448,14 +1423,29 @@ ul.search-type li input:checked+label {
     .poem {
         display: none;
     }
-
-    .container {
-        grid-template-columns: 50% 50%;
-        -ms-grid-columns: 50% 50%;
-    }
 }
 
 @media screen and (max-device-width: 799px) {
+    .header {
+        width: 85%;
+    }
+    
+    .banner {
+        width: 99%;
+    }
+
+    .about {
+        padding-right: 1%;
+    }
+
+    .jweather {
+        padding-right: 2px;
+    }
+
+    .container {
+        align-items: flex-end;
+    }
+
     .inner-center {
         width: 85%;
     }
@@ -1520,17 +1510,6 @@ ul.search-type li input:checked+label {
         padding-left: 0 !important;
     }
 
-    .container {
-        -ms-grid-columns: 50% 50%;
-        grid-template-columns: 50% 50%;
-        align-items: end;
-        line-height: 22px;
-    }
-
-    .jweather {
-        padding-right: 8px;
-    }
-
     .jw_weather:hover+.jw_tip,
     .jw_pm25:hover+.jw_tip {
         display: none;
@@ -1544,18 +1523,8 @@ ul.search-type li input:checked+label {
         display: none !important;
     }
 
-    .about svg,
-    .about a {
-        display: none !important;
-    }
-
-    .darkmode svg {
-        display: inline-block !important;
-    }
-
     .title {
         text-align: center;
-        justify-self: start;
     }
 
     .logo-box {
@@ -1606,14 +1575,6 @@ ul.search-type li input:checked+label {
         padding: 20px 0 30px;
     }
 
-    .header-grid {
-        width: 85%;
-        margin: 0 auto;
-        grid-template-columns: 85% 15%;
-        -ms-grid-columns: 85% 15%;
-        justify-items: center;
-    }
-
     .highlight {
         padding-left: 0 !important;
     }
@@ -1621,4 +1582,161 @@ ul.search-type li input:checked+label {
     .github-corner {
         display: none;
     }
+}
+
+/* dark theme */
+body.dark,
+.dark a,
+.dark .slick-track,
+.dark .metaColor a,
+.dark .metaColor,
+.dark .jj-list-con li a,
+.dark .s-sticker div,
+.dark .s-type .s-type-list label,
+.dark #search-text,
+.dark ul.search-type li input:checked+label,
+.dark .greetings,
+.dark .footer p,
+.dark .footer a,
+.dark .footer a:link,
+.dark .footer a:hover,
+.dark .footer a:visited,
+.dark .footer a:active,
+.dark .markdown-body,
+.dark .jweather,
+.dark .jw_wtip,
+.dark .jw_tip {
+    color: #adbac7 !important;
+}
+
+.dark .items li a {
+    color: #adbac7 !important;
+    background: #22272e !important;
+    box-shadow: 0 0 8px #373e47 !important;
+}
+
+.dark .items li a:hover,
+.dark .items li a.active {
+    color: #f2f2f2;
+    background: #1890ff;
+}
+
+.dark #header,
+.dark .header,
+.dark .footer,
+.dark .dark_ball {
+    background-color: #2d333b !important;
+}
+
+.dark .footer {
+    border-top: #373e47 !important;
+}
+
+.dark .content,
+.dark .s-type-list,
+.dark #search-text,
+.dark ul.search-type li input:checked+label,
+.dark .markdown-body,
+.dark .markdown-body img {
+    background-color: #1c2128 !important;
+}
+
+
+.dark #search input,
+.dark #search select,
+.dark #search textarea {
+    background-color: #1c2128 !important;
+    box-shadow: 0 1px 6px rgba(32, 33, 36, .28);
+    border-color: rgba(223, 225, 229, 0);
+}
+
+.dark a:hover,
+.dark .jj-list-con li a:hover,
+.dark .jj-list-con li:hover a,
+.dark .search-group ul.search-type li label:hover,
+.dark .search-group ul.search-type li label:hover {
+    color: #539bf5 !important;
+}
+
+.dark .jj-list-con li {
+    border: 1px #1c2128 solid !important;
+}
+
+.dark .jj-list-con li:hover {
+    background: #2d333b !important;
+}
+
+.dark .item-box,
+.dark .search-group ul.search-type li label,
+.dark .jj-list-con li {
+    background: #22272e !important;
+}
+
+.dark #search input:hover,
+.dark #search select:hover,
+.dark #search textarea:hover {
+    box-shadow: inset 0px 0px 2px #adbac7 !important;
+}
+
+.dark .border {
+    border-color: #373e47 !important;
+}
+
+.dark #super-search-fm #search-text {
+    border: 1px solid #373e47 !important;
+}
+
+.dark .back-to-top,
+.dark .jw_pm25:hover {
+    background: #adbac7 !important;
+    color: #1c2128 !important;
+}
+
+.dark .back-to-top svg {
+    fill: #1c2128 !important;
+}
+
+.dark .jj-list-tit {
+    color: #adbac7 !important;
+}
+
+.dark label.toggle-item {
+    background: #f2f2f2;
+}
+
+.dark .markdown-body .highlight pre,
+.dark .markdown-body pre,
+.dark .markdown-body code,
+.dark .markdown-body tt {
+    background-color: #2b333b !important;
+}
+
+.dark .dark_label {
+    background-color: #adbac7 !important;
+}
+
+.dark .green,
+.dark .yellow,
+.dark .orange,
+.dark .red,
+.dark .purple,
+.dark .maroon {
+    color: #1c2128 !important;
+}
+
+.dark .github-corner svg {
+    fill: #adbac7 !important;
+    color: #2d333b !important;
+}
+
+.dark .lightDarkModes:hover {
+    color: #1890FF;
+}
+.dark .lightDarkOptions {
+    background-color: #2d333b !important;
+    border: thin solid #2d333b !important;
+}
+.dark .lightDarkOption:hover {
+    background-color: #22272e !important;
+    color: #1890FF !important;
 }
