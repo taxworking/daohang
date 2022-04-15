@@ -663,10 +663,10 @@ $(document).ready(function () {
       var re = /\bhttps?:\/\/(?!\S+(?:jpe?g|png|bmp|gif|webp|jfif|gif))\S+/g;
       var re_forpic = /\bhttps?:[^:<>"]*\/([^:<>"]*)(\.(jpe?g)|(png)|(bmp)|(jfif)|(webp))/g;
       str = str.replace(re, function (website) {
-        return '<span class=emoji>🔗</span>';
+        return '<span class="iconify-inline" data-icon="bx:link-external"></span>';
       });
       str = str.replace(re_forpic, function (imgurl) {
-        return '<span class=emoji>🎴</span>';
+        return '<span class="iconify-inline" data-icon="bi:image-fill"></span>';
       });
       return str;
     }
