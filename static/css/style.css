@@ -1273,6 +1273,11 @@ ul.search-type li input:checked+label {
 .lightDarkMode {
     padding-top: 0;
     position: relative;
+    --shadow-color: rgba(0, 0, 0, 0.12);
+    --shadow: 0 8px 20px var(--shadow-color);
+    border-left: 1px solid;
+    margin-left: 7px;
+    padding-left: 14px;
 }
 
 .lightDarkModes {
@@ -1429,7 +1434,7 @@ ul.search-type li input:checked+label {
     .header {
         width: 85%;
     }
-    
+
     .banner {
         width: 99%;
     }
@@ -1732,10 +1737,12 @@ body.dark,
 .dark .lightDarkModes:hover {
     color: #1890FF;
 }
+
 .dark .lightDarkOptions {
     background-color: #2d333b !important;
     border: thin solid #2d333b !important;
 }
+
 .dark .lightDarkOption:hover {
     background-color: #22272e !important;
     color: #1890FF !important;
