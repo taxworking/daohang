@@ -643,7 +643,7 @@ if (jQuery(".comment_stars a").click((function () {
 // 首页调用嘀咕 JSON 版
 $(document).ready(function () {
   if ($("#index-talk").length > 0) {
-    jsonUrl = "https://eallion.com/memos.json"
+    jsonUrl = "https://api.eallion.com/memos/memos.json"
     $.getJSON(jsonUrl + "?t=" + Date.parse(new Date()), function (res) {
       var bberCount = res.count;
       var talksHtml = ''
