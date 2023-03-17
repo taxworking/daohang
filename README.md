@@ -1,6 +1,7 @@
 # 蜗牛个人导航
 
 ### Live Demo
+
 - [https://s.eallion.com](https://s.eallion.com)
 
 ### 关于
@@ -13,35 +14,37 @@
 
 本站目前采用 VS Code 编辑，用 Git 管理，托管于 GitHub，通过 Vercel 构建部署。
 
-原始模板托管在 `master` 分支。https://github.com/eallion/favorite/tree/master 。可通过  [https://eallion.github.io/favorite](https://eallion.github.io/favorite/) 预览。
+原始模板托管在 `master` 分支。<https://github.com/eallion/favorite/tree/master> 。可通过  [https://eallion.github.io/favorite](https://eallion.github.io/favorite/) 预览。
 
 本人热爱开源分享，欢迎探讨交流。但因为本站为个人使用，除非个人需要，一般不会有 Breaking Change，也没时间处理功能性需求。本站已开放源码，稍加修改即可部署使用。通过 Issue 和邮件提出的问题，我可能不及时，但一定会回复。
+
 ### 优化与负优化
 
- - 手机端适配
- - 搜索框重构
- - jQuery：<https://jquery.com/>
- - Google fonts：<https://fonts.google.com/>
- - Google favicon API：<https://www.google.cn/s2/favicons?domain_url=https://s.eallion.com>
- - Self-hosted favicon api (Vercel)：<https://favicon.api.eallion.com/?sz=32&url=https://s.eallion.com>
- - Iconify：<https://iconify.design/>
- - 今日诗词：<https://www.jinrishici.com/>
- - Umami 统计：<https://github.com/mikecao/umami.git>
- - Staticfile CDN：<http://staticfile.org/>
- - 和风天气：<https://www.qweather.com/>
- - Vanilla lazyload：<https://github.com/verlok/vanilla-lazyload>
- - PWA：<https://web.dev/progressive-web-apps/>
- - Moment：<https://github.com/moment/moment>
- - Lately：<https://tokinx.github.io/lately/index-zh.html>
- - Smooth scroll：<https://github.com/mmkjony/jQuery.toTop>
- - Toggle menu：<https://codepen.io/Siddharth11/pen/vNEEZp>
- - Dark mode: <https://github.com/coliff/dark-mode-switch>
- - 极客族：<https://cdn.geekzu.org/cached.html>
- - 腾讯云开发：<https://cloud.tencent.com/product/tcb>
- - 嘀咕 Talk：<https://eallion.com/talk/>
- - 腾讯公益 404：<https://news.qq.com/404/>
+- 手机端适配
+- 搜索框重构
+- jQuery：<https://jquery.com/>
+- Google fonts：<https://fonts.google.com/>
+- Google favicon API：<https://www.google.cn/s2/favicons?domain_url=https://s.eallion.com>
+- Self-hosted favicon api (Vercel)：<https://favicon.api.eallion.com/?sz=32&url=https://s.eallion.com>
+- Iconify：<https://iconify.design/>
+- 今日诗词：<https://www.jinrishici.com/>
+- Umami 统计：<https://github.com/mikecao/umami.git>
+- Staticfile CDN：<http://staticfile.org/>
+- 和风天气：<https://www.qweather.com/>
+- Vanilla lazyload：<https://github.com/verlok/vanilla-lazyload>
+- PWA：<https://web.dev/progressive-web-apps/>
+- Moment：<https://github.com/moment/moment>
+- Lately：<https://tokinx.github.io/lately/index-zh.html>
+- Smooth scroll：<https://github.com/mmkjony/jQuery.toTop>
+- Toggle menu：<https://codepen.io/Siddharth11/pen/vNEEZp>
+- Dark mode: <https://github.com/coliff/dark-mode-switch>
+- 极客族：<https://cdn.geekzu.org/cached.html>
+- 腾讯云开发：<https://cloud.tencent.com/product/tcb>
+- 嘀咕 Talk：<https://eallion.com/talk/>
+- 腾讯公益 404：<https://news.qq.com/404/>
 
 ### Inspiration
+
 - <https://github.com/TopVitamin/static-nav>
 - <https://github.com/soulteary/docker-flare>
 - <https://edui123.com/>
@@ -49,6 +52,7 @@
 - <https://www.milkdh.com/>
 
 ### LICENSE
+
 ```
 GLWT（祝你好运）公共许可证
 版权所有（C）每个人，除了作者
