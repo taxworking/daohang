@@ -1,5 +1,7 @@
 # 蜗牛个人导航
 
+**导航程序已迁移至 [helloxz/onenav](https://github.com/helloxz/onenav)，并且使用自己修改的主题 [eallion/onenav-baisu-mod](https://github.com/eallion/onenav-baisu-mod)**
+
 ### Live Demo
 
 - [https://s.eallion.com](https://s.eallion.com)
