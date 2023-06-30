@@ -1,10 +1,10 @@
 # 蜗牛个人导航
 
-**导航程序已迁移至 [helloxz/onenav](https://github.com/helloxz/onenav)，并且使用自己修改的主题 [eallion/onenav-baisu-mod](https://github.com/eallion/onenav-baisu-mod)**
+## !!!**导航程序已迁移至 [helloxz/onenav](https://github.com/helloxz/onenav) 并使用自己修改的主题 [eallion/onenav-baisu-mod](https://github.com/eallion/onenav-baisu-mod)**
 
-### Live Demo
+### 导航预览 （老版本）
 
-- [https://s.eallion.com](https://s.eallion.com)
+- [https://eallion.github.io/favorite](https://eallion.github.io/favorite/) 
 
 ### 关于
 
@@ -16,7 +16,7 @@
 
 本站目前采用 VS Code 编辑，用 Git 管理，托管于 GitHub，通过 Vercel 构建部署。
 
-原始模板托管在 `master` 分支。<https://github.com/eallion/favorite/tree/master> 。可通过  [https://eallion.github.io/favorite](https://eallion.github.io/favorite/) 预览。
+原始模板托管在 `master` 分支。<https://github.com/eallion/favorite/tree/master> 。
 
 本人热爱开源分享，欢迎探讨交流。但因为本站为个人使用，除非个人需要，一般不会有 Breaking Change，也没时间处理功能性需求。本站已开放源码，稍加修改即可部署使用。通过 Issue 和邮件提出的问题，我可能不及时，但一定会回复。
 
