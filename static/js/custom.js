@@ -340,7 +340,7 @@ $(document).bind('DOMNodeInserted', function (event) {
   };
   var callback_error = function (element) {
     logElementEvent("💀 ERROR", element);
-    element.src = "/static/img/error.png";
+    element.src = "static/img/error.png";
   };
   var callback_finish = function () {
     logElementEvent("✔️ FINISHED", document.documentElement);
@@ -418,28 +418,26 @@ WIDGET = {
 }
 */
 // 今日诗词
-var xhr = new XMLHttpRequest();
-xhr.open('get', 'https://v2.jinrishici.com/one.json');
-xhr.onreadystatechange = function () {
-  if (xhr.readyState === 4) {
-    var result = JSON.parse(xhr.responseText);
-    var gushici = document.getElementById('gushici');
-    var poem_info = document.getElementById('poem_info');
-    gushici.innerHTML = '<a href="https://www.google.com/search?q=' + result.data.content + '" target="_blank" rel="noopener noreferrer">' + result.data.content + '</a>';
-    poem_info.innerHTML = '<a href="https://www.google.com/search?q=' + result.data.origin.author + ' ' + result.data.origin.title + '" target="_blank" rel="noopener noreferrer">' + '【' + result.data.origin.dynasty + '】' + result.data.origin.author + '《' + result.data.origin.title + '》' + '</a>';
-  }
-};
-xhr.send();
+// var xhr = new XMLHttpRequest();
+// xhr.open('get', 'https://v2.jinrishici.com/one.json');
+// xhr.onreadystatechange = function () {
+//   if (xhr.readyState === 4) {
+//     var result = JSON.parse(xhr.responseText);
+//     var gushici = document.getElementById('gushici');
+//     var poem_info = document.getElementById('poem_info');
+//     gushici.innerHTML = '<a href="https://www.google.com/search?q=' + result.data.content + '" target="_blank" rel="noopener noreferrer">' + result.data.content + '</a>';
+//     poem_info.innerHTML = '<a href="https://www.google.com/search?q=' + result.data.origin.author + ' ' + result.data.origin.title + '" target="_blank" rel="noopener noreferrer">' + '【' + result.data.origin.dynasty + '】' + result.data.origin.author + '《' + result.data.origin.title + '》' + '</a>';
+//   }
+// };
+// xhr.send();
 
 // 今日诗词 v2
-/*
-jinrishici.load(function (result) {
-  var sentence = document.querySelector("#gushici")
-  var info = document.querySelector("#poem_info")
-  sentence.innerHTML = '<a href="https://www.google.com/search?q=' + result.data.content + '" target="_blank" rel="noopener noreferrer">' + result.data.content + '</a>'
-  info.innerHTML = '-' + '<a href="https://www.google.com/search?q=' + result.data.origin.author + ' ' + result.data.origin.title + '" target="_blank" rel="noopener noreferrer">' + '【' + result.data.origin.dynasty + '】' + result.data.origin.author + '《' + result.data.origin.title + '》' + '</a>'
-});
-*/
+// jinrishici.load(function (result) {
+//   var sentence = document.querySelector("#gushici")
+//   var info = document.querySelector("#poem_info")
+//   sentence.innerHTML = '<a href="https://www.google.com/search?q=' + result.data.content + '" target="_blank" rel="noopener noreferrer">' + result.data.content + '</a>'
+//   info.innerHTML = '-' + '<a href="https://www.google.com/search?q=' + result.data.origin.author + ' ' + result.data.origin.title + '" target="_blank" rel="noopener noreferrer">' + '【' + result.data.origin.dynasty + '】' + result.data.origin.author + '《' + result.data.origin.title + '》' + '</a>'
+// });
 
 // 今日诗词天气api
 var weather = new XMLHttpRequest();
@@ -643,12 +641,11 @@ if (jQuery(".comment_stars a").click((function () {
 // 首页调用嘀咕 JSON 版
 $(document).ready(function () {
   if ($("#index-talk").length > 0) {
-    jsonUrl = "https://memos.eallion.com/api/v1/memo?creatorId=101&rowStatus=NORMAL&limit=10"
-    $.getJSON(jsonUrl + "?t=" + Date.parse(new Date()), function (res) {
-      var bberCount = res.count;
+    jsonUrl = "https://memos.eallion.com/api/v1/memos?pageSize=10&filter=creator%3D%3D%27users%2F101%27%26%26visibilities%3D%3D%5B%27PUBLIC%27%5D"
+    $.getJSON(jsonUrl + "&t=" + Date.parse(new Date()), function (res) {
       var talksHtml = ''
-      $.each(res.data, function (i, item) {
-        d = new Date(item.createdTs * 1000);
+      $.each(res.memos, function (i, item) {
+        d = new Date(item.createTime);
         date = d.getFullYear() + '/' + (d.getMonth() + 1) + '/' + d.getDate() + ' ' + d.getHours() + ':' + d.getMinutes() + ':' + d.getSeconds()
         dataTime = '<span class="datatime">' + date + '</span>'
         talksHtml += '<li class="item item-' + (i + 1) + '">' + dataTime + '： <a href="https://eallion.com/memos/" target="_blank" rel="noopener noreferrer">' + urlToLink(item.content) + '</a></li>'

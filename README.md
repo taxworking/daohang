@@ -1,10 +1,12 @@
 # 蜗牛个人导航
 
-## !!!**导航程序已迁移至 [helloxz/onenav](https://github.com/helloxz/onenav) 并使用自己修改的主题 [eallion/onenav-baisu-mod](https://github.com/eallion/onenav-baisu-mod)**
+## !!! **导航程序已迁移至 [tznb1/TwoNav](https://github.com/tznb1/TwoNav) 并且使用官方主题 [eallion/twonav-theme-webstack-hugo](https://github.com/eallion/twonav-theme-webstack-hugo)**
 
-### 导航预览 （老版本）
+- https://s.eallion.com (TwoNav)
 
-- [https://eallion.github.io/favorite](https://eallion.github.io/favorite/) 
+### 导航预览（老版本）
+
+- https://eallion.github.io/favorite
 
 ### 关于
 
